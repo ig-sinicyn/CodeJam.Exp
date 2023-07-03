@@ -16,5 +16,4 @@
 	<Target Name="Publish" />
 	<Target Name="Rebuild" />
 	<Target Name="Build" />
-	<Target Name="Clean" />
 </Project>

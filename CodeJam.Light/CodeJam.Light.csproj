@@ -27,7 +27,6 @@
 	<!-- #region Targeting shims -->
 	<ItemGroup>
 		<PackageReference Condition=" '$(UseTheraot)' == 'true'" Include="Theraot.Core" Version="3.2.11" />
-		<PackageReference Condition=" '$(UseTheraot)' == 'true'" Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
 		<PackageReference Condition=" '$(UsePackageReferences)' == 'true'" Include="microsoft.netframework.referenceassemblies" Version="1.0.3">
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
