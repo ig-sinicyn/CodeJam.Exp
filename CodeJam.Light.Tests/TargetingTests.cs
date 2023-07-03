@@ -15,10 +15,10 @@ public class TargetingTests
 		}
 
 		[Pure, ContractsPure]
-		public async Task<Record?> TaskAsync()
+		public async Task<string?> TaskAsync()
 		{
 			await Task.Yield();
-			return new("Hello!");
+			return "Hello!";
 		}
 
 		public async ValueTask<string?> ValueTaskAsync()
@@ -27,11 +27,13 @@ public class TargetingTests
 			return "Hello!";
 		}
 
+#if NET40_OR_GREATER
 		public async IAsyncEnumerable<string?> EnumerateAsync()
 		{
 			await Task.Yield();
 			yield return "Hello!";
 		}
+#endif
 	}
 
 	[Test]
@@ -68,6 +70,7 @@ public class TargetingTests
 		(await sample.ValueTaskAsync()).Should().Be("Hello!");
 	}
 
+#if NET40_OR_GREATER
 	[Test]
 	public async Task TestAsyncEnumerable()
 	{
@@ -77,5 +80,35 @@ public class TargetingTests
 		{
 			s.Should().Be("Hello!");
 		}
+	}
+#endif
+
+	/// <summary>
+	/// Tests the index.
+	/// </summary>
+	[Test]
+	public void TestIndex()
+	{
+		var bytes = new byte[] { 1, 2, 3 };
+
+		bytes[1..].Should().BeEquivalentTo(new byte[] { 2, 3 });
+
+		var text = "Hello!";
+
+		text[1..^1].Should().Be("ello");
+	}
+
+	/// <summary>
+	/// Tests the index.
+	/// </summary>
+	[Test]
+	public void TestKeyValuePairDeconstruct()
+	{
+		var pair = new KeyValuePair<int, string>(1, "2");
+
+		var (a, b) = pair;
+
+		a.Should().Be(1);
+		b.Should().Be("2");
 	}
 }

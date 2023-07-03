@@ -157,99 +157,99 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
-		<UseTheraot>false</UseTheraot>
+		<UseTheraot>true</UseTheraot>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">

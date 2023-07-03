@@ -2,5 +2,7 @@
 	<PropertyGroup>
 		<GenerateDocumentationFile>false</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+
+		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 </Project>

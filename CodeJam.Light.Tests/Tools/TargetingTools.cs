@@ -3,8 +3,6 @@
 
 using CodeJam.Strings;
 
-using JetBrains.Annotations;
-
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -32,7 +30,7 @@ public class TargetingTools
 		// Flags
 		None = 0x0,
 		TheraotCore = 0x1,
-		PackageReferences = 0x2,
+		ReferenceAssemblies = 0x2,
 		SystemDiagnosticsContractsPackage = 0x4,
 		SystemDiagnosticsContractsReference = 0x8,
 		InitAndNullable = 0x10,
@@ -45,12 +43,12 @@ public class TargetingTools
 		LegacyNetCore = SystemDiagnosticsContractsPackage | TheraotCore,
 		NetStandard = InitAndNullable,
 		LegacyNetStandard = SystemDiagnosticsContractsPackage | TheraotCore,
-		NetFramework = SystemDiagnosticsContractsReference | InitAndNullable,
-		LegacyNetFramework = SystemDiagnosticsContractsReference | PackageReferences | TheraotCore,
+		NetFramework = SystemDiagnosticsContractsReference | TheraotCore,
+		LegacyNetFramework = SystemDiagnosticsContractsReference | ReferenceAssemblies | TheraotCore,
 		PackageAndTest = Package | Test,
 
 		CompatibilityShims = TheraotCore
-							 | PackageReferences
+							 | ReferenceAssemblies
 							 | SystemDiagnosticsContractsPackage
 							 | SystemDiagnosticsContractsReference
 							 | InitAndNullable
@@ -197,7 +195,7 @@ public class TargetingTools
 				WriteLine($@"
 	<PropertyGroup Condition="" '$(TargetFramework)' == '{moniker}' "">
 		<UseTheraot>{FormatFlag(shim, Shims.TheraotCore)}</UseTheraot>
-		<UsePackageReferences>{FormatFlag(shim, Shims.PackageReferences)}</UsePackageReferences>
+		<UsePackageReferences>{FormatFlag(shim, Shims.ReferenceAssemblies)}</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>{FormatFlag(shim, Shims.SystemDiagnosticsContractsPackage)}</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>{FormatFlag(shim, Shims.SystemDiagnosticsContractsReference)}</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>{FormatFlag(shim, Shims.InitAndNullable)}</UseInitAndNullable>

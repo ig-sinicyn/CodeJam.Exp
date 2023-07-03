@@ -5,11 +5,13 @@
 	<PropertyGroup>
 		<AssemblyName>CodeJam.Light.Tests</AssemblyName>
 		<RootNamespace>CodeJam.Tests</RootNamespace>
-		<TargetFrameworks>net6.0</TargetFrameworks>
+		<TargetFrameworks>net472</TargetFrameworks>
+		<TargetFrameworks2>net6.0;net7.0;net5.0;netcoreapp3.1;net48;net472;net461;net45;net40;net35</TargetFrameworks2>
 		<Nullable>enable</Nullable>
 		<LangVersion>10.0</LangVersion>
 
-		<IsPackable>false</IsPackable>
+		<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+		<CheckEolTargetFramework>false</CheckEolTargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
