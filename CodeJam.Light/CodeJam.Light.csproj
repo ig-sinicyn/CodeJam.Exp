@@ -7,7 +7,6 @@
 		<AssemblyName>CodeJam.Light</AssemblyName>
 		<RootNamespace>CodeJam</RootNamespace>
 		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;</TargetFrameworks>
-		<TargetFrameworkss>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net472;net461;net45;net40;net35</TargetFrameworkss>
 		<Nullable>enable</Nullable>
 		<LangVersion>10.0</LangVersion>
 
@@ -24,7 +23,7 @@
 		<PackageTags>list string collection data-structure threading xml reflection async assertion IO extension algorithms structures utilities suffix-tree range tagged-union discriminated union discriminated-union variant variant-record disjoint-union sum-type</PackageTags>
 	</PropertyGroup>
 
-	<!-- #region Targeting -->
+	<!-- #region Targeting shims -->
 	<ItemGroup>
 		<PackageReference Condition=" '$(UseTheraot)' == 'true'" Include="Theraot.Core" Version="3.2.11" />
 		<PackageReference Condition=" '$(UseTheraot)' == 'true'" Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
