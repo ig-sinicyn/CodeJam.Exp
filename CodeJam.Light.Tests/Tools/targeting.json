@@ -48,6 +48,6 @@
     "net47": "NetFramework",
     "net471": "NetFramework",
     "net472": "NetFramework, PackageAndTest",
-    "net48": "NetFramework, Test"
+    "net48": "NetFramework, Test, BclAsyncInterfaces"
   }
 }

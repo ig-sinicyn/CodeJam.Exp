@@ -22,6 +22,7 @@
 	<!-- Compat shim monikers -->
 	<PropertyGroup>
 		<UseTheraot>false</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -30,6 +31,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -38,6 +40,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -46,6 +49,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -54,6 +58,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -62,6 +67,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -70,6 +76,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -78,6 +85,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -86,6 +94,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
 		<UseTheraot>false</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -94,6 +103,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -102,6 +112,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -110,6 +121,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -118,6 +130,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -126,6 +139,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -134,6 +148,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -142,6 +157,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -150,6 +166,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -158,6 +175,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -166,6 +184,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -174,6 +193,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -182,6 +202,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -190,6 +211,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -198,6 +220,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -206,6 +229,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -214,6 +238,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -222,6 +247,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -230,6 +256,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -238,6 +265,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -246,6 +274,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -254,6 +283,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -262,6 +292,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net20' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
@@ -270,6 +301,7 @@
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net11' ">
 		<UseTheraot>true</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>

@@ -30,13 +30,14 @@ public class TargetingTools
 		// Flags
 		None = 0x0,
 		TheraotCore = 0x1,
-		ReferenceAssemblies = 0x2,
-		SystemDiagnosticsContractsPackage = 0x4,
-		SystemDiagnosticsContractsReference = 0x8,
-		InitAndNullable = 0x10,
-		Package = 0x20,
-		Test = 0x40,
-		Minimal = 0x80,
+		BclAsyncInterfaces = 0x2,
+		ReferenceAssemblies = 0x4,
+		SystemDiagnosticsContractsPackage = 0x8,
+		SystemDiagnosticsContractsReference = 0x10,
+		InitAndNullable = 0x20,
+		Package = 0x40,
+		Test = 0x80,
+		Minimal = 0x100,
 
 		// Presets
 		NetCore = None,
@@ -48,6 +49,7 @@ public class TargetingTools
 		PackageAndTest = Package | Test,
 
 		CompatibilityShims = TheraotCore
+							 | BclAsyncInterfaces
 							 | ReferenceAssemblies
 							 | SystemDiagnosticsContractsPackage
 							 | SystemDiagnosticsContractsReference
@@ -181,6 +183,7 @@ public class TargetingTools
 	<!-- Compat shim monikers -->
 	<PropertyGroup>
 		<UseTheraot>false</UseTheraot>
+		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -195,6 +198,7 @@ public class TargetingTools
 				WriteLine($@"
 	<PropertyGroup Condition="" '$(TargetFramework)' == '{moniker}' "">
 		<UseTheraot>{FormatFlag(shim, Shims.TheraotCore)}</UseTheraot>
+		<UseBclAsyncInterfaces>{FormatFlag(shim, Shims.BclAsyncInterfaces)}</UseBclAsyncInterfaces>
 		<UsePackageReferences>{FormatFlag(shim, Shims.ReferenceAssemblies)}</UsePackageReferences>
 		<UseSystemDiagnosticsPackage>{FormatFlag(shim, Shims.SystemDiagnosticsContractsPackage)}</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>{FormatFlag(shim, Shims.SystemDiagnosticsContractsReference)}</UseSystemDiagnosticsReference>
