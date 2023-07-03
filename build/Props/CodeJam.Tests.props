@@ -1,0 +1,6 @@
+<Project>
+	<PropertyGroup>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	</PropertyGroup>
+</Project>

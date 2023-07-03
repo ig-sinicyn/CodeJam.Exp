@@ -1,0 +1,24 @@
+<Project>
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+		<!-- Filled on each project individually -->
+		<!--<PackageId></PackageId>
+		<Title></Title>
+		<Authors></Authors>
+		<Product></Product>
+		<Description></Description>
+		<PackageProjectUrl></PackageProjectUrl>
+		<PackageLicenseUrl></PackageLicenseUrl>
+		<PackageIconUrl></PackageIconUrl>
+		<PackageTags></PackageTags>-->
+
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+</Project>

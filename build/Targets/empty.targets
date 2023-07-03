@@ -1,0 +1,20 @@
+<Project>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<IsPublishable>false</IsPublishable>
+	</PropertyGroup>
+
+	<!-- THANKSTO https://stackoverflow.com/a/47619786 -->
+	<!-- Import SDK explicitly -->
+	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+	<!-- Override imported targets -->
+	<Target Name="Restore" />
+	<Target Name="Publish" />
+	<Target Name="Rebuild" />
+	<Target Name="Build" />
+	<Target Name="Clean" />
+</Project>

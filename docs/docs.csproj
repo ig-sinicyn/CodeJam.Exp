@@ -1,0 +1,6 @@
+﻿<Project>
+	<Import Project="..\build\Targets\empty.targets" />
+	<ItemGroup>
+		<None Include="..\ReadMe.md" Link="ReadMe.md" />
+	</ItemGroup>
+</Project>
