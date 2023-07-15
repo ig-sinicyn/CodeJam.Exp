@@ -1,0 +1,113 @@
+﻿<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="static GeneratedTextTransformation.Shims" #>
+<#+
+#nullable enable
+
+	// Well-known monikers. See https://docs.microsoft.com/en-us/dotnet/standard/frameworks
+	// We do package
+	// * net core 3.1, 6.0, 7.0
+	// * net standard 2.0, 2.1
+	// * net framework 3.5, 4.0, 4.5, 4.6.1, 4.7.2
+	// We do run tests over
+	// * net core 3.1, 5.0, 6.0, 7.0
+	// * net framework 3.5, 4.0, 4.5, 4.6.1, 4.7.2, 4.8
+	private static readonly TargetingOptions Targeting = new TargetingOptions
+	{
+		DefaultFramework = "net6.0",
+		NetCoreShims = new()
+		{
+			["netcoreapp1.0"] = LegacyNetCore,
+			["netcoreapp1.1"] = LegacyNetCore,
+			["netcoreapp2.0"] = LegacyNetCore,
+			["netcoreapp2.1"] = LegacyNetCore,
+			["netcoreapp2.2"] = LegacyNetCore,
+			["netcoreapp3.0"] = LegacyNetCore,
+			["netcoreapp3.1"] = LegacyNetCore | PackageAndTest,
+			["net5.0"] = NetCore | Test,
+			["net6.0"] = PackageAndTest | Minimal,
+			["net7.0"] = NetCore | PackageAndTest
+		},
+		NetStandardShims = new()
+		{
+			["netstandard1.0"] = LegacyNetStandard,
+			["netstandard1.1"] = LegacyNetStandard,
+			["netstandard1.2"] = LegacyNetStandard,
+			["netstandard1.3"] = LegacyNetStandard,
+			["netstandard1.4"] = LegacyNetStandard,
+			["netstandard1.5"] = LegacyNetStandard,
+			["netstandard1.6"] = LegacyNetStandard,
+			["netstandard2.0"] = LegacyNetStandard | Package | Minimal,
+			["netstandard2.1"] = NetStandard | Package
+		},
+		NetFrameworkShims = new()
+		{
+			["net11"] = LegacyNetFramework,
+			["net20"] = LegacyNetFramework,
+			["net35"] = LegacyNetFramework | PackageAndTest,
+			["net40"] = NetFramework| PackageAndTest,
+			["net403"] = NetFramework,
+			["net45"] = NetFramework| PackageAndTest,
+			["net451"] = NetFramework,
+			["net452"] = NetFramework,
+			["net46"] = NetFramework,
+			["net461"] = NetFramework| PackageAndTest,
+			["net462"] = NetFramework,
+			["net47"] =NetFramework,
+			["net471"] = NetFramework,
+			["net472"] = NetFramework| PackageAndTest,
+			["net48"] = NetFramework| PackageAndTest
+
+		}
+	};
+
+	private class TargetingOptions
+	{
+		public string DefaultFramework { get; set; } = default!;
+
+		public Dictionary<string, Shims> NetCoreShims { get; set; } = new();
+
+		public Dictionary<string, Shims> NetStandardShims { get; set; } = new();
+
+		public Dictionary<string, Shims> NetFrameworkShims { get; set; } = new();
+
+		public PackageVersions DefaultPackageVersions = new();
+
+		public Dictionary<string, PackageVersions> PackageOverrides { get; set; } = new();
+	}
+
+	public class PackageVersions: Dictionary<string, string> {}
+
+
+	[Flags]
+	public enum Shims
+	{
+		// Flags
+		None = 0x05,
+		TheraotCore = 0x1,
+		BclAsyncInterfaces = 0x2,
+		ReferenceAssemblies = 0x4,
+		SystemDiagnosticsContractsPackage = 0x8,
+		SystemDiagnosticsContractsReference = 0x10,
+		InitAndNullable = 0x20,
+		Package = 0x40,
+		Test = 0x80,
+		Minimal = 0x100,
+
+		// Presets
+		NetCore = None,
+		LegacyNetCore = SystemDiagnosticsContractsPackage | TheraotCore,
+		NetStandard = InitAndNullable,
+		LegacyNetStandard = SystemDiagnosticsContractsPackage | TheraotCore,
+		NetFramework = SystemDiagnosticsContractsReference | TheraotCore,
+		LegacyNetFramework = SystemDiagnosticsContractsReference | ReferenceAssemblies | TheraotCore,
+		PackageAndTest = Package | Test,
+
+		CompatibilityShims = TheraotCore
+			| BclAsyncInterfaces
+			| ReferenceAssemblies
+			| SystemDiagnosticsContractsPackage
+			| SystemDiagnosticsContractsReference
+			| InitAndNullable
+	}
+#>

@@ -49,5 +49,13 @@
     "net471": "NetFramework",
     "net472": "NetFramework, PackageAndTest",
     "net48": "NetFramework, Test, BclAsyncInterfaces"
+  },
+  "packageVersions": {
+    "default": {
+      "FluentAssertions": "6.11.0"
+    },
+    "net45": {
+      "FluentAssertions": "6.11.0"
+    }
   }
 }

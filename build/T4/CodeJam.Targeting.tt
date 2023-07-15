@@ -1,0 +1,22 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file = "CodeJam.TargetingConfig.ttinclude"#>
+<#@ output extension=".props" #>
+<#
+	// Targeting class contains full monikers description. See https://docs.microsoft.com/en-us/dotnet/standard/frameworks
+	// We do package
+	// * net core 3.1, 6.0, 7.0
+	// * net standard 2.0, 2.1
+	// * net framework 3.5, 4.0, 4.5, 4.6.1, 4.7.2
+	// We do run tests over
+	// * net core 3.1, 5.0, 6.0, 7.0
+	// * net framework 3.5, 4.0, 4.5, 4.6.1, 4.7.2, 4.8
+	
+#>
+<tag></tag>
+<#+
+
+#>

@@ -7,10 +7,42 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Include="T4\CodeJam.TargetingConfig.props">
+	    <DependentUpon>CodeJam.TargetingConfig.ttinclude</DependentUpon>
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	  </Compile>
+	  <Compile Include="T4\CodeJam.Targeting.props">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>CodeJam.Targeting.tt</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />
 		<None Include="..\.gitattributes" Link=".gitattributes" />
 		<None Include="..\.gitignore" Link=".gitignore" />
 		<None Include="..\Directory.Build.props" Link="Props\Directory.Build.props" />
 		<None Include="..\Directory.Build.targets" Link="Targets\Directory.Build.targets" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="T4\CodeJam.TargetingConfig.ttinclude">
+	    <Generator></Generator>
+	  </None>
+	  <None Update="T4\CodeJam.Targeting.props">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>CodeJam.Targeting.tt</DependentUpon>
+	  </None>
+	  <None Update="T4\CodeJam.Targeting.tt">
+	    <Generator>TextTemplatingFileGenerator</Generator>
+	    <LastGenOutput>CodeJam.Targeting.props</LastGenOutput>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
 	</ItemGroup>
 </Project>
