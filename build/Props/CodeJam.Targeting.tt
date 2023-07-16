@@ -36,6 +36,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLegacyFluentAssertions>false</UseLegacyFluentAssertions>
 	</PropertyGroup>
 <#foreach (var p in GetMonikerShims(CompatibilityShims)) {#>
 
@@ -46,6 +47,21 @@ he code is regenerated.
 		<UseSystemDiagnosticsPackage><#=FormatFlag(p.Value, SystemDiagnosticsContractsPackage)#></UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference><#=FormatFlag(p.Value, SystemDiagnosticsContractsReference)#></UseSystemDiagnosticsReference>
 		<UseInitAndNullable><#=FormatFlag(p.Value, InitAndNullable)#></UseInitAndNullable>
+	</PropertyGroup>
+<#}#>
+
+	<!-- Assembly versions -->
+	<PropertyGroup>
+<#foreach (var p in Targeting.DefaultPackageVersions) {#>
+		<<#=p.Key#>Version><#=p.Value#></<#=p.Key#>Version>
+<#}#>
+	</PropertyGroup>
+<#foreach (var g in Targeting.PackageVersionOverrides) {#>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == '<#=g.Key#>' ">
+<#	foreach (var p in g.Value) {#>
+		<<#=p.Key#>Version><#=p.Value#></<#=p.Key#>Version>
+<#	}#>
 	</PropertyGroup>
 <#}#>
 <#

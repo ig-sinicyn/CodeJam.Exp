@@ -1,4 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\build\Props\CodeJam.Targeting.props" />
+	<Import Project="..\build\Props\CodeJam.Publish.props" />
 
 	<PropertyGroup>
 		<AssemblyName>CodeJam.Light</AssemblyName>
@@ -55,8 +57,5 @@
 	<ItemGroup>
 		<Compile Include="..\Build\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
 	</ItemGroup>
-
-	<Import Project="..\build\Props\CodeJam.Targeting.props" />
-	<Import Project="..\build\Props\CodeJam.Publish.props" />
 
 </Project>

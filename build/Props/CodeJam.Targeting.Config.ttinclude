@@ -12,7 +12,7 @@
 	private static readonly TargetingOptions Targeting = new()
 	{
 		DefaultFramework = "net6.0",
-		NetCoreShims = new()
+		NetCoreShims =
 		{
 			["netcoreapp1.0"] = LegacyNetCore,
 			["netcoreapp1.1"] = LegacyNetCore,
@@ -25,7 +25,7 @@
 			["net6.0"] = NetCore | PackageAndTest | Minimal,
 			["net7.0"] = NetCore | PackageAndTest
 		},
-		NetStandardShims = new()
+		NetStandardShims =
 		{
 			["netstandard1.0"] = LegacyNetStandard,
 			["netstandard1.1"] = LegacyNetStandard,
@@ -37,7 +37,7 @@
 			["netstandard2.0"] = LegacyNetStandard | Package | Minimal,
 			["netstandard2.1"] = NetStandard | Package
 		},
-		NetFrameworkShims = new()
+		NetFrameworkShims =
 		{
 			["net11"] = LegacyNetFramework,
 			["net20"] = LegacyNetFramework,
@@ -54,6 +54,17 @@
 			["net471"] = NetFramework,
 			["net472"] = NetFramework | PackageAndTest | BclAsyncInterfaces,
 			["net48"] = NetFramework | PackageAndTest | BclAsyncInterfaces
+		},
+		DefaultPackageVersions =
+		{
+			["FluentAssertions"] = "6.11.0"
+		},
+		PackageVersionOverrides =
+		{
+			["net45"] = new()
+			{
+				["FluentAssertions"] = "5.10.3"
+			}
 		}
 	};
 
@@ -61,15 +72,15 @@
 	{
 		public string DefaultFramework { get; set; } = default!;
 
-		public Dictionary<string, Shims> NetCoreShims { get; set; } = new();
+		public Dictionary<string, Shims> NetCoreShims { get; } = new();
 
-		public Dictionary<string, Shims> NetStandardShims { get; set; } = new();
+		public Dictionary<string, Shims> NetStandardShims { get; } = new();
 
-		public Dictionary<string, Shims> NetFrameworkShims { get; set; } = new();
+		public Dictionary<string, Shims> NetFrameworkShims { get; } = new();
 
-		public PackageVersions DefaultPackageVersions = new();
+		public PackageVersions DefaultPackageVersions { get; }= new();
 
-		public Dictionary<string, PackageVersions> PackageOverrides { get; set; } = new();
+		public Dictionary<string, PackageVersions> PackageVersionOverrides { get; } = new();
 	}
 
 	public class PackageVersions: Dictionary<string, string> {}

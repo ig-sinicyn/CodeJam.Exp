@@ -30,6 +30,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLegacyFluentAssertions>false</UseLegacyFluentAssertions>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
@@ -309,6 +310,15 @@ he code is regenerated.
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+	</PropertyGroup>
+
+	<!-- Assembly versions -->
+	<PropertyGroup>
+		<FluentAssertionsVersion>6.11.0</FluentAssertionsVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+		<FluentAssertionsVersion>4.2</FluentAssertionsVersion>
 	</PropertyGroup>
 
 	<!-- Monikers for .Net Core -->
