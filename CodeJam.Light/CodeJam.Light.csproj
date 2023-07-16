@@ -1,8 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="..\build\Props\CodeJam.Targeting.props" />
-	<Import Project="..\build\Props\CodeJam.Publish.props" />
-
 	<PropertyGroup>
 		<AssemblyName>CodeJam.Light</AssemblyName>
 		<RootNamespace>CodeJam</RootNamespace>
@@ -39,6 +36,10 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
+		<PackageReference Condition=" '$(UseRangesSubArray)' == 'true'" Include="TA.System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray" Version="1.0.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Condition=" '$(UseInitAndNullable)' == 'true'" Include="TA.System.Runtime.CompilerServices.RuntimeHelpers.GetSubArray" Version="1.0.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -54,5 +55,8 @@
 	<ItemGroup>
 		<Compile Include="..\Build\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
 	</ItemGroup>
+
+	<Import Project="..\build\Props\CodeJam.Targeting.props" />
+	<Import Project="..\build\Props\CodeJam.Publish.props" />
 
 </Project>

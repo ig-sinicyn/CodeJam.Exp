@@ -83,9 +83,6 @@ public class TargetingTests
 	}
 #endif
 
-	/// <summary>
-	/// Tests the index.
-	/// </summary>
 	[Test]
 	public void TestIndex()
 	{
@@ -98,9 +95,21 @@ public class TargetingTests
 		text[1..^1].Should().Be("ello");
 	}
 
-	/// <summary>
-	/// Tests the index.
-	/// </summary>
+	[Test]
+	public void TestIndexTypes()
+	{
+
+		var bytes = new byte[] { 1, 2, 3 };
+
+		var index = new System.Range(1, Index.End);
+		bytes[index].Should().BeEquivalentTo(new byte[] { 2, 3 });
+
+		var text = "Hello!";
+
+		var textIndex = new System.Range(1, 1);
+		text[textIndex].Should().Be("ello");
+	}
+
 	[Test]
 	public void TestKeyValuePairDeconstruct()
 	{

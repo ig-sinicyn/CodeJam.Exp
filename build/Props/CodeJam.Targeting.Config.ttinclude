@@ -9,7 +9,7 @@
 	// We do run tests over
 	// * net core 3.1, 5.0, 6.0, 7.0
 	// * net framework 3.5, 4.0, 4.5, 4.6.1, 4.7.2, 4.8
-	private static readonly TargetingOptions Targeting = new TargetingOptions
+	private static readonly TargetingOptions Targeting = new()
 	{
 		DefaultFramework = "net6.0",
 		NetCoreShims = new()
