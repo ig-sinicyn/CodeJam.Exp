@@ -1,7 +1,4 @@
-﻿<#@ assembly name="System.Core" #>
-<#@ import namespace="System.Collections.Generic" #>
-<#@ import namespace="static GeneratedTextTransformation.Shims" #>
-<#+
+﻿<#@ import namespace="static GeneratedTextTransformation.Shims" #><#+
 #nullable enable
 
 	// Well-known monikers. See https://docs.microsoft.com/en-us/dotnet/standard/frameworks
@@ -25,7 +22,7 @@
 			["netcoreapp3.0"] = LegacyNetCore,
 			["netcoreapp3.1"] = LegacyNetCore | PackageAndTest,
 			["net5.0"] = NetCore | Test,
-			["net6.0"] = PackageAndTest | Minimal,
+			["net6.0"] = NetCore | PackageAndTest | Minimal,
 			["net7.0"] = NetCore | PackageAndTest
 		},
 		NetStandardShims = new()
@@ -45,19 +42,18 @@
 			["net11"] = LegacyNetFramework,
 			["net20"] = LegacyNetFramework,
 			["net35"] = LegacyNetFramework | PackageAndTest,
-			["net40"] = NetFramework| PackageAndTest,
+			["net40"] = NetFramework | PackageAndTest,
 			["net403"] = NetFramework,
-			["net45"] = NetFramework| PackageAndTest,
+			["net45"] = NetFramework | PackageAndTest,
 			["net451"] = NetFramework,
 			["net452"] = NetFramework,
 			["net46"] = NetFramework,
-			["net461"] = NetFramework| PackageAndTest,
+			["net461"] = NetFramework | PackageAndTest | Minimal,
 			["net462"] = NetFramework,
 			["net47"] =NetFramework,
 			["net471"] = NetFramework,
-			["net472"] = NetFramework| PackageAndTest,
-			["net48"] = NetFramework| PackageAndTest
-
+			["net472"] = NetFramework | PackageAndTest | BclAsyncInterfaces,
+			["net48"] = NetFramework | PackageAndTest | BclAsyncInterfaces
 		}
 	};
 
@@ -83,7 +79,7 @@
 	public enum Shims
 	{
 		// Flags
-		None = 0x05,
+		None = 0x0,
 		TheraotCore = 0x1,
 		BclAsyncInterfaces = 0x2,
 		ReferenceAssemblies = 0x4,
