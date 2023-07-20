@@ -5,10 +5,10 @@
 	<PropertyGroup>
 		<AssemblyName>CodeJam.Light</AssemblyName>
 		<RootNamespace>CodeJam</RootNamespace>
-		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45;net40;net35</TargetFrameworks>
 		<TargetFrameworks2>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45;net40;net35</TargetFrameworks2>
 		<Nullable>enable</Nullable>
-		<LangVersion>10.0</LangVersion>
+		<LangVersion>11.0</LangVersion>
 
 		<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
 
@@ -56,6 +56,13 @@
 
 	<ItemGroup>
 		<Compile Include="..\Build\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\images\nuget\CodeJam.Main.Icon.png">
+			<Pack>true</Pack>
+			<PackagePath>icon.png</PackagePath>
+		</None>
 	</ItemGroup>
 
 </Project>

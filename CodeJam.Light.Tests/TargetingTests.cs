@@ -5,35 +5,81 @@ namespace CodeJam.Tests;
 [TestFixture]
 public class TargetingTests
 {
+#if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET40_OR_GREATER
+	[Test]
+	public void TestSpans()
+	{
+		System.MemoryExtensions
+		var a = "Hello!".AsSpan();
+
+		a[1..^2].Should().BeEquivalentTo("ell");
+	}
+
+	[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
+	public record Record(string Value)
+	{
+		public string? InitValue { get; init; }
+	}
+
+	[Test]
+	public void TestRecord()
+	{
+		var record = new Record("sample") { InitValue = "sample2" };
+
+		record.Value.Should().Be("sample");
+		record.InitValue.Should().Be("sample2");
+	}
+#endif
+
+	[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
+	public readonly record struct RecordStruct(string Value)
+	{
+		public string? InitValue { get; init; } = null;
+	}
+
+	[Test]
+	public void TestRecordStruct()
+	{
+		var record = new RecordStruct("sample") { InitValue = "sample2" };
+
+		record.Value.Should().Be("sample");
+		record.InitValue.Should().Be("sample2");
+	}
+
+#if NET45_OR_GREATER
+	public async IAsyncEnumerable<string?> EnumerateAsync()
+	{
+		await TaskEx.Delay(1);
+		yield return "Hello!";
+	}
+
+	[Test]
+	public async Task TestAsyncEnumerable()
+	{
+		await foreach (var s in EnumerateAsync())
+		{
+			s.Should().Be("Hello!");
+		}
+	}
+#endif
+
 	[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 	internal class CSharp10Features
 	{
-		[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
-		public record Record(string Value)
-		{
-			public string? InitValue { get; init; }
-		}
+
 
 		[Pure, ContractsPure]
 		public async Task<string?> TaskAsync()
 		{
-			await Task.Yield();
+			await TaskEx.Yield();
 			return "Hello!";
 		}
 
 		public async ValueTask<string?> ValueTaskAsync()
 		{
-			await Task.Yield();
+			await TaskEx.Yield();
 			return "Hello!";
 		}
-
-#if NET40_OR_GREATER
-		public async IAsyncEnumerable<string?> EnumerateAsync()
-		{
-			await Task.Yield();
-			yield return "Hello!";
-		}
-#endif
 	}
 
 	[Test]
@@ -53,35 +99,19 @@ public class TargetingTests
 		a.b.Should().Be(2);
 	}
 
+#if LESSTHAN_NET45
 	[Test]
-	public void TestRecord()
-	{
-		var record = new CSharp10Features.Record("sample") { InitValue = "sample2" };
+	public void TestAsyncShim() => TestAsync().Wait();
 
-		record.Value.Should().Be("sample");
-		record.InitValue.Should().Be("sample2");
-	}
-
+#else
 	[Test]
+#endif
 	public async Task TestAsync()
 	{
 		var sample = new CSharp10Features();
 		(await sample.TaskAsync()).Should().Be("Hello!");
 		(await sample.ValueTaskAsync()).Should().Be("Hello!");
 	}
-
-#if NET40_OR_GREATER
-	[Test]
-	public async Task TestAsyncEnumerable()
-	{
-		var sample = new CSharp10Features();
-
-		await foreach (var s in sample.EnumerateAsync())
-		{
-			s.Should().Be("Hello!");
-		}
-	}
-#endif
 
 	[Test]
 	public void TestIndex()
@@ -106,7 +136,7 @@ public class TargetingTests
 
 		var text = "Hello!";
 
-		var textIndex = new System.Range(1, 1);
+		var textIndex = new System.Range(1, ^1);
 		text[textIndex].Should().Be("ello");
 	}
 

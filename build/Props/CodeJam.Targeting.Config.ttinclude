@@ -20,7 +20,7 @@
 			["netcoreapp2.1"] = LegacyNetCore,
 			["netcoreapp2.2"] = LegacyNetCore,
 			["netcoreapp3.0"] = LegacyNetCore,
-			["netcoreapp3.1"] = LegacyNetCore | PackageAndTest,
+			["netcoreapp3.1"] = NetCore | PackageAndTest,
 			["net5.0"] = NetCore | Test,
 			["net6.0"] = NetCore | PackageAndTest | Minimal,
 			["net7.0"] = NetCore | PackageAndTest
@@ -64,6 +64,14 @@
 			["net45"] = new()
 			{
 				["FluentAssertions"] = "5.10.3"
+			},
+			["net40"] = new()
+			{
+				["FluentAssertions"] = "4.19.4"
+			},
+			["net35"] = new()
+			{
+				["FluentAssertions"] = "2.2.0"
 			}
 		}
 	};
@@ -92,14 +100,15 @@
 		// Flags
 		None = 0x0,
 		TheraotCore = 0x1,
-		BclAsyncInterfaces = 0x2,
-		ReferenceAssemblies = 0x4,
-		SystemDiagnosticsContractsPackage = 0x8,
-		SystemDiagnosticsContractsReference = 0x10,
-		InitAndNullable = 0x20,
-		Package = 0x40,
-		Test = 0x80,
-		Minimal = 0x100,
+		SystemMemory = 0x2,
+		BclAsyncInterfaces = 0x4,
+		ReferenceAssemblies = 0x8,
+		SystemDiagnosticsContractsPackage = 0x10,
+		SystemDiagnosticsContractsReference = 0x20,
+		InitAndNullable = 0x40,
+		Package = 0x80,
+		Test = 0x100,
+		Minimal = 0x200,
 
 		// Presets
 		NetCore = None,

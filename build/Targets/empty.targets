@@ -16,4 +16,5 @@
 	<Target Name="Publish" />
 	<Target Name="Rebuild" />
 	<Target Name="Build" />
+	<Target Name="Pack" />
 </Project>

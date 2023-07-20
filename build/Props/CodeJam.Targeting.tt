@@ -75,7 +75,7 @@ EmitTargetingConstants(".Net Framework", "TARGETS_NET", Targeting.NetFrameworkSh
 	{
 		var monikers = monikerShims.OrderBy(x => GetMonikerVersion(x.Key)).Select(x => x.Key).ToArray();#>
 
-	<!-- Monikers for <#=description#> -->
+	<!-- DefineConstants for <#=description#> -->
 <#+
 		for (var monikerIndex = 0; monikerIndex < monikers.Length; monikerIndex++)
 		{

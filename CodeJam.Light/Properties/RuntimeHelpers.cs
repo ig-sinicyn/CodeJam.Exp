@@ -1,6 +1,7 @@
 ﻿#if TARGETS_NET || LESSTHAN_NETSTANDARD21 || LESSTHAN_NETCOREAPP30
 // ReSharper disable once CheckNamespace
 // BASEDON: https://gist.github.com/bgrainger/fb2c18659c2cdfce494c82a8c4803360
+// (taken from https://github.com/bgrainger/IndexRange readme)
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
