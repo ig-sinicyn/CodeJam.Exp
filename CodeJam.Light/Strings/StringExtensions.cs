@@ -6,15 +6,6 @@
 [PublicAPI]
 public partial class StringExtensions
 {
-	public static void TestSpans()
-	{
-		System.MemoryExtensions
-		var a = "Hello!".AsSpan();
-
-		a[1..^2].Should().BeEquivalentTo("ell");
-	}
-
-
 	#region Internal API
 
 	/// <summary>

@@ -5,16 +5,18 @@ namespace CodeJam.Tests;
 [TestFixture]
 public class TargetingTests
 {
-#if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET40_OR_GREATER
+#if NET50_OR_GREATER
 	[Test]
 	public void TestSpans()
 	{
-		System.MemoryExtensions
 		var a = "Hello!".AsSpan();
 
-		a[1..^2].Should().BeEquivalentTo("ell");
+		a[1..^2].ToString().Should().BeEquivalentTo("ell");
 	}
+#endif
 
+
+#if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET40_OR_GREATER
 	[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 	public record Record(string Value)
 	{
