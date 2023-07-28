@@ -29,12 +29,12 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLegacyFluentAssertions>false</UseLegacyFluentAssertions>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
@@ -43,11 +43,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>true</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
@@ -56,11 +56,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>true</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
@@ -69,63 +69,63 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
-		<UseLangInit>true</UseLangInit>
-		<UseLangNullable>true</UseLangNullable>
-		<UseLangIndexRange>true</UseLangIndexRange>
+		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
 		<UseTheraot>true</UseTheraot>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
 		<UseTheraot>true</UseTheraot>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
-		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
-		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
@@ -134,102 +134,102 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>true</UseLangInit>
-		<UseLangNullable>true</UseLangNullable>
-		<UseLangIndexRange>true</UseLangIndexRange>
+		<UseLangNullable>false</UseLangNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
 		<UseTheraot>true</UseTheraot>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
 		<UseTheraot>true</UseTheraot>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
@@ -238,11 +238,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
@@ -251,11 +251,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
@@ -264,11 +264,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
@@ -277,11 +277,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
@@ -290,11 +290,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
@@ -303,11 +303,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
@@ -316,11 +316,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
@@ -329,11 +329,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
@@ -342,11 +342,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
@@ -355,11 +355,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
@@ -368,11 +368,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
@@ -381,11 +381,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
@@ -394,11 +394,11 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
@@ -407,11 +407,11 @@ he code is regenerated.
 		<UsePackageReferences>true</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net20' ">
@@ -420,11 +420,11 @@ he code is regenerated.
 		<UsePackageReferences>true</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net11' ">
@@ -433,11 +433,11 @@ he code is regenerated.
 		<UsePackageReferences>true</UsePackageReferences>
 		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<!-- Assembly versions -->

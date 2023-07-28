@@ -18,7 +18,7 @@ has to be used in real projects and has to proof its efficiency.
 support all .Net versions starting with .Net 3.5
 (technically, we may support .Net 2.0 but we have no test pipeline for that).
 
-## Targeting
+## Full targeting mode
 
 Just to make things more interesting, we do target all major frameworks starting from Net35.
 
@@ -28,5 +28,6 @@ that are missing from earlier .Net versions.
 For the code:
 1. We do use [T4 template](build/Props/CodeJam.Targeting.tt) to generate msbuild .props file with targeting build properties.
    Check the [Targeting Config](build/Props/CodeJam.Targeting.Config.ttinclude) file for our setup details
-1. 
-
+1. Current targeting limitations:
+   * [No class records](https://github.com/dotnet/roslyn/issues/55812) for netcoreapp1.\*, net3.5, netstandard1.5 and earlier.
+   * No span support for netstandard 1.0 (not supported by System.Memory package)

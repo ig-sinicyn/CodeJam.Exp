@@ -14,11 +14,11 @@
 		DefaultFramework = "net6.0",
 		NetCoreShims =
 		{
-			["netcoreapp1.0"] = TheraotCore,
-			["netcoreapp1.1"] = TheraotCore,
-			["netcoreapp2.0"] = TheraotCore,
-			["netcoreapp2.1"] = TheraotCore,
-			["netcoreapp2.2"] = TheraotCore | BclAsyncInterfaces | LangInit | LangNullable | LangIndexRange,
+			["netcoreapp1.0"] = TheraotCore | SystemDiagnosticsContractsPackage | SystemMemoryPackage,
+			["netcoreapp1.1"] = TheraotCore | SystemDiagnosticsContractsPackage | SystemMemoryPackage,
+			["netcoreapp2.0"] = TheraotCore | BclAsyncInterfaces | SystemMemoryPackage,
+			["netcoreapp2.1"] = TheraotCore | BclAsyncInterfaces,
+			["netcoreapp2.2"] = TheraotCore | BclAsyncInterfaces,
 			["netcoreapp3.0"] = LangInit,
 			["netcoreapp3.1"] = LangInit | PackageAndTest,
 			["net5.0"] = None | Test,
@@ -27,15 +27,15 @@
 		},
 		NetStandardShims =
 		{
-			["netstandard1.0"] = LegacyNetStandard,
-			["netstandard1.1"] = LegacyNetStandard,
-			["netstandard1.2"] = LegacyNetStandard,
-			["netstandard1.3"] = LegacyNetStandard,
-			["netstandard1.4"] = LegacyNetStandard,
-			["netstandard1.5"] = LegacyNetStandard,
-			["netstandard1.6"] = LegacyNetStandard,
-			["netstandard2.0"] = LegacyNetStandard | Package | Minimal,
-			["netstandard2.1"] = NetStandard | Package
+			["netstandard1.0"] = TheraotCore | SystemDiagnosticsContractsPackage,
+			["netstandard1.1"] = TheraotCore | SystemDiagnosticsContractsPackage | SystemMemoryPackage,
+			["netstandard1.2"] = TheraotCore | SystemDiagnosticsContractsPackage | SystemMemoryPackage,
+			["netstandard1.3"] = TheraotCore | SystemDiagnosticsContractsPackage | SystemMemoryPackage,
+			["netstandard1.4"] = TheraotCore | SystemDiagnosticsContractsPackage | SystemMemoryPackage,
+			["netstandard1.5"] = TheraotCore | SystemDiagnosticsContractsPackage | SystemMemoryPackage,
+			["netstandard1.6"] = TheraotCore | BclAsyncInterfaces | SystemMemoryPackage,
+			["netstandard2.0"] = TheraotCore | BclAsyncInterfaces | SystemMemoryPackage | Package | Minimal,
+			["netstandard2.1"] = LangInit | Package
 		},
 		NetFrameworkShims =
 		{
@@ -50,7 +50,7 @@
 			["net46"] = NetFramework,
 			["net461"] = NetFramework | PackageAndTest | Minimal,
 			["net462"] = NetFramework,
-			["net47"] =NetFramework,
+			["net47"] = NetFramework,
 			["net471"] = NetFramework,
 			["net472"] = NetFramework | PackageAndTest | BclAsyncInterfaces,
 			["net48"] = NetFramework | PackageAndTest | BclAsyncInterfaces
@@ -86,49 +86,51 @@
 
 		public Dictionary<string, Shims> NetFrameworkShims { get; } = new();
 
-		public PackageVersions DefaultPackageVersions { get; }= new();
+		public PackageVersions DefaultPackageVersions { get; } = new();
 
 		public Dictionary<string, PackageVersions> PackageVersionOverrides { get; } = new();
 	}
 
-	public class PackageVersions: Dictionary<string, string> {}
+	public class PackageVersions : Dictionary<string, string>
+	{
+	}
 
 
 	[Flags]
 	public enum Shims
 	{
 		// Flags
-		None = 0x0,
-		TheraotCore = 0x1,
-		SystemMemory = 0x2,
-		BclAsyncInterfaces = 0x4,
-		ReferenceAssemblies = 0x8,
-		SystemDiagnosticsContractsPackage = 0x10,
-		SystemMemoryPackage = 0x20,
-		SystemDiagnosticsContractsReference = 0x40,
-		LangInit = 0x80,
-		LangNullable = 0x100,
-		LangIndexRange = 0x200,
-		Package = 0x400,
-		Test = 0x800,
-		Minimal = 0x1000,
+	None = 0x0,
+	TheraotCore = 0x1,
+	SystemMemory = 0x2,
+	BclAsyncInterfaces = 0x4,
+	ReferenceAssemblies = 0x8,
+	SystemDiagnosticsContractsPackage = 0x10,
+	SystemMemoryPackage = 0x20,
+	SystemDiagnosticsContractsReference = 0x40,
+	SystemThreadingTasksPackage = 0x80,
+	LangInit = 0x100,
+	LangNullable = 0x200,
+	Package = 0x400,
+	Test = 0x800,
+	Minimal = 0x1000,
 
 		// Presets
-		InitAndNullable = LangInit | LangNullable | LangIndexRange,
+	InitAndNullable = LangInit | LangNullable,
 
-		NetCore = None,
-		LegacyNetCore = SystemDiagnosticsContractsPackage | TheraotCore,
-		NetStandard = InitAndNullable,
-		LegacyNetStandard = SystemDiagnosticsContractsPackage | TheraotCore,
-		NetFramework = SystemDiagnosticsContractsReference | SystemMemoryPackage | TheraotCore,
-		LegacyNetFramework = SystemDiagnosticsContractsReference | ReferenceAssemblies | SystemMemoryPackage | TheraotCore,
-		PackageAndTest = Package | Test,
+	NetCore = None,
+	LegacyNetCore = SystemDiagnosticsContractsPackage | TheraotCore,
+	NetStandard = InitAndNullable,
+	LegacyNetStandard = SystemDiagnosticsContractsPackage | TheraotCore,
+	NetFramework = SystemDiagnosticsContractsReference | SystemMemoryPackage | TheraotCore,
+	LegacyNetFramework = SystemDiagnosticsContractsReference | ReferenceAssemblies | SystemMemoryPackage | TheraotCore,
+	PackageAndTest = Package | Test,
 
-		CompatibilityShims = TheraotCore
-			| BclAsyncInterfaces
-			| ReferenceAssemblies
-			| SystemDiagnosticsContractsPackage
-			| SystemDiagnosticsContractsReference
-			| InitAndNullable
+	CompatibilityShims = TheraotCore
+	                     | BclAsyncInterfaces
+	                     | ReferenceAssemblies
+	                     | SystemDiagnosticsContractsPackage
+	                     | SystemDiagnosticsContractsReference
+	                     | InitAndNullable
 	}
 #>

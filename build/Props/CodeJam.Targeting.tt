@@ -35,12 +35,12 @@ he code is regenerated.
 		<UsePackageReferences>false</UsePackageReferences>
 		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLegacyFluentAssertions>false</UseLegacyFluentAssertions>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
-		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 <#foreach (var p in GetMonikerShims(CompatibilityShims)) {#>
 
@@ -50,11 +50,11 @@ he code is regenerated.
 		<UsePackageReferences><#=FormatFlag(p.Value, ReferenceAssemblies)#></UsePackageReferences>
 		<UseSystemMemoryPackage><#=FormatFlag(p.Value, SystemMemoryPackage)#></UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage><#=FormatFlag(p.Value, SystemDiagnosticsContractsPackage)#></UseSystemDiagnosticsPackage>
+		<UseSystemThreadingTasksPackage><#=FormatFlag(p.Value, SystemThreadingTasksPackage)#></UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference><#=FormatFlag(p.Value, SystemDiagnosticsContractsReference)#></UseSystemDiagnosticsReference>
 		<UseInitAndNullable><#=FormatFlag(p.Value, InitAndNullable)#></UseInitAndNullable>
 		<UseLangInit><#=FormatFlag(p.Value, LangInit)#></UseLangInit>
 		<UseLangNullable><#=FormatFlag(p.Value, LangNullable)#></UseLangNullable>
-		<UseLangIndexRange><#=FormatFlag(p.Value, LangIndexRange)#></UseLangIndexRange>
 	</PropertyGroup>
 <#}#>
 
