@@ -249,7 +249,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -262,7 +262,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -275,7 +275,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -288,7 +288,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -301,7 +301,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -314,7 +314,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -327,7 +327,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -340,7 +340,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -353,7 +353,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
@@ -366,7 +366,7 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>

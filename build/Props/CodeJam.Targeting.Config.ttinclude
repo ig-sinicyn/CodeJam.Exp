@@ -44,16 +44,16 @@
 			["net35"] = TheraotCore | ReferenceAssemblies | PackageAndTest,
 			["net40"] = TheraotCore | ReferenceAssemblies | PackageAndTest,
 			["net403"] = TheraotCore | ReferenceAssemblies,
-			["net45"] = TheraotCore | PackageAndTest,
-			["net451"] = TheraotCore,
-			["net452"] = TheraotCore,
-			["net46"] = TheraotCore,
-			["net461"] = TheraotCore | PackageAndTest | Minimal,
-			["net462"] = TheraotCore,
-			["net47"] = TheraotCore | BclAsyncInterfaces,
-			["net471"] = TheraotCore | BclAsyncInterfaces,
-			["net472"] = TheraotCore | BclAsyncInterfaces | PackageAndTest,
-			["net48"] = TheraotCore | BclAsyncInterfaces | PackageAndTest
+			["net45"] = TheraotCore | SystemMemoryPackage | PackageAndTest,
+			["net451"] = TheraotCore | SystemMemoryPackage,
+			["net452"] = TheraotCore | SystemMemoryPackage,
+			["net46"] = TheraotCore | SystemMemoryPackage,
+			["net461"] = TheraotCore | SystemMemoryPackage | PackageAndTest | Minimal,
+			["net462"] = TheraotCore | SystemMemoryPackage,
+			["net47"] = TheraotCore | SystemMemoryPackage | BclAsyncInterfaces,
+			["net471"] = TheraotCore | SystemMemoryPackage | BclAsyncInterfaces,
+			["net472"] = TheraotCore | SystemMemoryPackage | BclAsyncInterfaces | PackageAndTest,
+			["net48"] = TheraotCore | SystemMemoryPackage | BclAsyncInterfaces | PackageAndTest
 		},
 		DefaultPackageVersions =
 		{
