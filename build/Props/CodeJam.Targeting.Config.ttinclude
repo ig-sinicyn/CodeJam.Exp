@@ -14,16 +14,16 @@
 		DefaultFramework = "net6.0",
 		NetCoreShims =
 		{
-			["netcoreapp1.0"] = LegacyNetCore,
-			["netcoreapp1.1"] = LegacyNetCore,
-			["netcoreapp2.0"] = LegacyNetCore,
-			["netcoreapp2.1"] = LegacyNetCore,
-			["netcoreapp2.2"] = LegacyNetCore,
-			["netcoreapp3.0"] = LegacyNetCore,
-			["netcoreapp3.1"] = NetCore | PackageAndTest,
-			["net5.0"] = NetCore | Test,
-			["net6.0"] = NetCore | PackageAndTest | Minimal,
-			["net7.0"] = NetCore | PackageAndTest
+			["netcoreapp1.0"] = TheraotCore,
+			["netcoreapp1.1"] = TheraotCore,
+			["netcoreapp2.0"] = TheraotCore,
+			["netcoreapp2.1"] = TheraotCore,
+			["netcoreapp2.2"] = TheraotCore | BclAsyncInterfaces | LangInit | LangNullable | LangIndexRange,
+			["netcoreapp3.0"] = LangInit,
+			["netcoreapp3.1"] = LangInit | PackageAndTest,
+			["net5.0"] = None | Test,
+			["net6.0"] = None | PackageAndTest | Minimal,
+			["net7.0"] = None | PackageAndTest
 		},
 		NetStandardShims =
 		{
@@ -104,19 +104,24 @@
 		BclAsyncInterfaces = 0x4,
 		ReferenceAssemblies = 0x8,
 		SystemDiagnosticsContractsPackage = 0x10,
-		SystemDiagnosticsContractsReference = 0x20,
-		InitAndNullable = 0x40,
-		Package = 0x80,
-		Test = 0x100,
-		Minimal = 0x200,
+		SystemMemoryPackage = 0x20,
+		SystemDiagnosticsContractsReference = 0x40,
+		LangInit = 0x80,
+		LangNullable = 0x100,
+		LangIndexRange = 0x200,
+		Package = 0x400,
+		Test = 0x800,
+		Minimal = 0x1000,
 
 		// Presets
+		InitAndNullable = LangInit | LangNullable | LangIndexRange,
+
 		NetCore = None,
 		LegacyNetCore = SystemDiagnosticsContractsPackage | TheraotCore,
 		NetStandard = InitAndNullable,
 		LegacyNetStandard = SystemDiagnosticsContractsPackage | TheraotCore,
-		NetFramework = SystemDiagnosticsContractsReference | TheraotCore,
-		LegacyNetFramework = SystemDiagnosticsContractsReference | ReferenceAssemblies | TheraotCore,
+		NetFramework = SystemDiagnosticsContractsReference | SystemMemoryPackage | TheraotCore,
+		LegacyNetFramework = SystemDiagnosticsContractsReference | ReferenceAssemblies | SystemMemoryPackage | TheraotCore,
 		PackageAndTest = Package | Test,
 
 		CompatibilityShims = TheraotCore

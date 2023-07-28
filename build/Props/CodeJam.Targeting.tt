@@ -33,10 +33,14 @@ he code is regenerated.
 		<UseTheraot>false</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLegacyFluentAssertions>false</UseLegacyFluentAssertions>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 <#foreach (var p in GetMonikerShims(CompatibilityShims)) {#>
 
@@ -44,9 +48,13 @@ he code is regenerated.
 		<UseTheraot><#=FormatFlag(p.Value, TheraotCore)#></UseTheraot>
 		<UseBclAsyncInterfaces><#=FormatFlag(p.Value, BclAsyncInterfaces)#></UseBclAsyncInterfaces>
 		<UsePackageReferences><#=FormatFlag(p.Value, ReferenceAssemblies)#></UsePackageReferences>
+		<UseSystemMemoryPackage><#=FormatFlag(p.Value, SystemMemoryPackage)#></UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage><#=FormatFlag(p.Value, SystemDiagnosticsContractsPackage)#></UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference><#=FormatFlag(p.Value, SystemDiagnosticsContractsReference)#></UseSystemDiagnosticsReference>
 		<UseInitAndNullable><#=FormatFlag(p.Value, InitAndNullable)#></UseInitAndNullable>
+		<UseLangInit><#=FormatFlag(p.Value, LangInit)#></UseLangInit>
+		<UseLangNullable><#=FormatFlag(p.Value, LangNullable)#></UseLangNullable>
+		<UseLangIndexRange><#=FormatFlag(p.Value, LangIndexRange)#></UseLangIndexRange>
 	</PropertyGroup>
 <#}#>
 

@@ -27,289 +27,417 @@ he code is regenerated.
 		<UseTheraot>false</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLegacyFluentAssertions>false</UseLegacyFluentAssertions>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-		<UseTheraot>true</UseTheraot>
+		<UseTheraot>false</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>true</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
-		<UseTheraot>true</UseTheraot>
+		<UseTheraot>false</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>true</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
 		<UseTheraot>true</UseTheraot>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
-		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseLangInit>true</UseLangInit>
+		<UseLangNullable>true</UseLangNullable>
+		<UseLangIndexRange>true</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
+		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
 		<UseTheraot>false</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>true</UseInitAndNullable>
+		<UseLangInit>true</UseLangInit>
+		<UseLangNullable>true</UseLangNullable>
+		<UseLangIndexRange>true</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>true</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net20' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net11' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
+		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
+		<UseLangInit>false</UseLangInit>
+		<UseLangNullable>false</UseLangNullable>
+		<UseLangIndexRange>false</UseLangIndexRange>
 	</PropertyGroup>
 
 	<!-- Assembly versions -->
