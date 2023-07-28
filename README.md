@@ -29,5 +29,6 @@ For the code:
 1. We do use [T4 template](build/Props/CodeJam.Targeting.tt) to generate msbuild .props file with targeting build properties.
    Check the [Targeting Config](build/Props/CodeJam.Targeting.Config.ttinclude) file for our setup details
 1. Current targeting limitations:
+   * No .Net 1.1 support (have no sense, anyways).
    * [No class records](https://github.com/dotnet/roslyn/issues/55812) for netcoreapp1.\*, net3.5, netstandard1.5 and earlier.
-   * No span support for netstandard 1.0 (not supported by System.Memory package)
+   * No span support for .Net Standard 1.0 or .Net 4.0.3 and earlier (not supported by System.Memory package)

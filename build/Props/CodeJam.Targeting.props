@@ -249,10 +249,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -262,10 +262,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -273,12 +273,12 @@ he code is regenerated.
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
 		<UseTheraot>true</UseTheraot>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -286,12 +286,12 @@ he code is regenerated.
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
 		<UseTheraot>true</UseTheraot>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
+		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -301,10 +301,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -314,10 +314,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -327,10 +327,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -340,10 +340,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -353,10 +353,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -366,10 +366,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -378,11 +378,11 @@ he code is regenerated.
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
-		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UsePackageReferences>true</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -391,11 +391,11 @@ he code is regenerated.
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
-		<UsePackageReferences>false</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UsePackageReferences>true</UsePackageReferences>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -405,10 +405,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -418,10 +418,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>
@@ -431,10 +431,10 @@ he code is regenerated.
 		<UseTheraot>true</UseTheraot>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UsePackageReferences>true</UsePackageReferences>
-		<UseSystemMemoryPackage>true</UseSystemMemoryPackage>
+		<UseSystemMemoryPackage>false</UseSystemMemoryPackage>
 		<UseSystemDiagnosticsPackage>false</UseSystemDiagnosticsPackage>
 		<UseSystemThreadingTasksPackage>false</UseSystemThreadingTasksPackage>
-		<UseSystemDiagnosticsReference>true</UseSystemDiagnosticsReference>
+		<UseSystemDiagnosticsReference>false</UseSystemDiagnosticsReference>
 		<UseInitAndNullable>false</UseInitAndNullable>
 		<UseLangInit>false</UseLangInit>
 		<UseLangNullable>false</UseLangNullable>

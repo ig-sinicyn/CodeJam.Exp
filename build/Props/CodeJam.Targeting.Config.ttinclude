@@ -39,21 +39,21 @@
 		},
 		NetFrameworkShims =
 		{
-			["net11"] = LegacyNetFramework,
-			["net20"] = LegacyNetFramework,
-			["net35"] = LegacyNetFramework | PackageAndTest,
-			["net40"] = NetFramework | PackageAndTest,
-			["net403"] = NetFramework,
-			["net45"] = NetFramework | PackageAndTest,
-			["net451"] = NetFramework,
-			["net452"] = NetFramework,
-			["net46"] = NetFramework,
-			["net461"] = NetFramework | PackageAndTest | Minimal,
-			["net462"] = NetFramework,
-			["net47"] = NetFramework,
-			["net471"] = NetFramework,
-			["net472"] = NetFramework | PackageAndTest | BclAsyncInterfaces,
-			["net48"] = NetFramework | PackageAndTest | BclAsyncInterfaces
+			["net11"] = TheraotCore | ReferenceAssemblies,
+			["net20"] = TheraotCore | ReferenceAssemblies,
+			["net35"] = TheraotCore | ReferenceAssemblies | PackageAndTest,
+			["net40"] = TheraotCore | ReferenceAssemblies | PackageAndTest,
+			["net403"] = TheraotCore | ReferenceAssemblies,
+			["net45"] = TheraotCore | PackageAndTest,
+			["net451"] = TheraotCore,
+			["net452"] = TheraotCore,
+			["net46"] = TheraotCore,
+			["net461"] = TheraotCore | PackageAndTest | Minimal,
+			["net462"] = TheraotCore,
+			["net47"] = TheraotCore | BclAsyncInterfaces,
+			["net471"] = TheraotCore | BclAsyncInterfaces,
+			["net472"] = TheraotCore | BclAsyncInterfaces | PackageAndTest,
+			["net48"] = TheraotCore | BclAsyncInterfaces | PackageAndTest
 		},
 		DefaultPackageVersions =
 		{
