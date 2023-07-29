@@ -29,32 +29,28 @@ he code is regenerated.
 
 	<!-- Package reference switches -->
 	<PropertyGroup>
-		<UseNullable>false</UseNullable>
-		<UseIsExternalInit>false</UseIsExternalInit>
-		<UseSystemDiagnosticsContracts>false</UseSystemDiagnosticsContracts>
-		<UseSystemDiagnosticsContractsReference>false</UseSystemDiagnosticsContractsReference>
-		<UseSystemThreadingTasks>false</UseSystemThreadingTasks>
-		<UseSystemMemory>false</UseSystemMemory>
-		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
-		<UseNetReferenceAssemblies>false</UseNetReferenceAssemblies>
-		<UseTheraotCore>false</UseTheraotCore>
+<#+
+		foreach (var shim in GetShimFlags(PackageShims))
+		{
+#>
+		<Use<#= shim #>>false</Use<#= shim #>>
+<#+
+		}
+#>
 	</PropertyGroup>
 <#+
-		foreach (var p in GetMonikerShims(Packages))
+		foreach (var p in GetMonikerShims(PackageShims))
 		{
 #>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == '<#= p.Key #>' ">
 <#+
-		EmitUsePackageFlag(p.Value, Shims.Nullable);
-		EmitUsePackageFlag(p.Value, IsExternalInit);
-		EmitUsePackageFlag(p.Value, SystemDiagnosticsContracts);
-		EmitUsePackageFlag(p.Value, SystemDiagnosticsContractsReference);
-		EmitUsePackageFlag(p.Value, SystemThreadingTasks);
-		EmitUsePackageFlag(p.Value, SystemMemory);
-		EmitUsePackageFlag(p.Value, BclAsyncInterfaces);
-		EmitUsePackageFlag(p.Value, NetReferenceAssemblies);
-		EmitUsePackageFlag(p.Value, TheraotCore);
+			foreach (var shim in GetShimFlags(p.Value & PackageShims))
+			{
+#>
+		<Use<#= shim #>>true</Use<#= shim #>>
+<#+
+			}
 #>
 	</PropertyGroup>
 <#+
@@ -95,18 +91,10 @@ he code is regenerated.
 		EmitTargetingConstants(".Net Standard", "TARGETS_NETSTANDARD", Targeting.NetStandardShims);
 		EmitTargetingConstants(".Net Framework", "TARGETS_NET", Targeting.NetFrameworkShims);
 #>
+
 </Project>
 <#+
 	}
-#>
-<#+
-	private void EmitUsePackageFlag(Shims shims, Shims condition)
-	{
-		if (shims.HasFlag(condition))
-			WriteLine($"\t\t<Use{condition}>true</Use{condition}>");
-	}
-#>
-<#+
 
 	private void EmitTargetingConstants(string description, string platform, Dictionary<string, Shims> monikerShims)
 	{

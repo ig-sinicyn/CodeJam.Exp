@@ -44,14 +44,14 @@
 		// Presets
 		PackageAndTest = Package | Test,
 
-		Packages = Nullable
-		           | IsExternalInit
-		           | SystemDiagnosticsContracts
-		           | SystemDiagnosticsContractsReference
-		           | SystemThreadingTasks
-		           | SystemMemory
-		           | BclAsyncInterfaces
-		           | NetReferenceAssemblies
-		           | TheraotCore
+		PackageShims = Nullable
+		               | IsExternalInit
+		               | SystemDiagnosticsContracts
+		               | SystemDiagnosticsContractsReference
+		               | SystemThreadingTasks
+		               | SystemMemory
+		               | BclAsyncInterfaces
+		               | NetReferenceAssemblies
+		               | TheraotCore
 	}
 #>

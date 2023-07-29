@@ -35,4 +35,11 @@
 
 	private IEnumerable<KeyValuePair<string, Shims>> GetMonikerShims(Shims anyFilter) =>
 		GetAllMonikerShims().Where(x => (x.Value & anyFilter) != 0);
+
+	private static bool IsPowerOfTwo(int x) => (x & (x - 1)) == 0;
+
+	private static IEnumerable<Shims> GetShimFlags(Shims mask) =>
+		((Shims[])Enum.GetValues(typeof(Shims)))
+			.Where(x => x != None && mask.HasFlag(x) && IsPowerOfTwo((int)x));
+
 #>
