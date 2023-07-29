@@ -1,6 +1,9 @@
-﻿<#@ include file = "CodeJam.Targeting.Config.ttinclude"#>
-<#@ import namespace="System.Linq" #><#+
-	private static string GetTargetFrameworkMonikers(Shims filter)
+﻿<#@ include file = "TargetingTemplate.Models.ttinclude"#><#+
+#nullable enable
+
+	private TargetingOptions Targeting { get; set; } = new();
+
+	private string GetTargetFrameworkMonikers(Shims filter)
 	{
 		var shims = GetAllMonikerShims()
 			.Where(x => x.Value.HasFlag(filter))
@@ -9,7 +12,7 @@
 		return string.Join(";", shims);
 	}
 
-	private static string GetMonikerVersion(string moniker) =>
+	private string GetMonikerVersion(string moniker) =>
 		moniker switch
 		{
 			_ when moniker.StartsWith("netstandard", StringComparison.Ordinal) =>
@@ -19,9 +22,9 @@
 			_ when moniker.StartsWith("net", StringComparison.Ordinal) =>
 				moniker.Substring("net".Length),
 			_ => moniker
-		};
+			};
 
-	private static IEnumerable<KeyValuePair<string, Shims>> GetAllMonikerShims() =>
+	private IEnumerable<KeyValuePair<string, Shims>> GetAllMonikerShims() =>
 		// In most cases dictionary preserves insert order until first reallocation
 		// As a caveat we do sort dictionary by keys,
 		// but current logic is pretty naive may not work for future moniker formats.
@@ -30,7 +33,7 @@
 			.Concat(Targeting.NetStandardShims.OrderByDescending(x => GetMonikerVersion(x.Key)))
 			.Concat(Targeting.NetFrameworkShims.OrderByDescending(x => GetMonikerVersion(x.Key)));
 
-	private static IEnumerable<KeyValuePair<string, Shims>> GetMonikerShims(Shims anyFilter) =>
+	private IEnumerable<KeyValuePair<string, Shims>> GetMonikerShims(Shims anyFilter) =>
 		GetAllMonikerShims().Where(x => (x.Value & anyFilter) != 0);
 
 	private static string FormatFlag(Shims shims, Shims filter) =>

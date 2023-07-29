@@ -1,0 +1,57 @@
+﻿<#@ import namespace="static GeneratedTextTransformation.Shims" #><#+
+#nullable enable
+
+	public class TargetingOptions
+	{
+		public string DefaultFramework { get; set; } = default!;
+
+		public Dictionary<string, Shims> NetCoreShims { get; } = new();
+
+		public Dictionary<string, Shims> NetStandardShims { get; } = new();
+
+		public Dictionary<string, Shims> NetFrameworkShims { get; } = new();
+
+		public PackageVersions DefaultPackageVersions { get; } = new();
+
+		public Dictionary<string, PackageVersions> PackageVersionOverrides { get; } = new();
+	}
+
+	public class PackageVersions : Dictionary<string, string>
+	{
+	}
+
+	[Flags]
+	public enum Shims
+	{
+		None = 0x0,
+
+		// Package flags
+		Nullable = 0x1,
+		IsExternalInit = 0x2,
+		SystemDiagnosticsContracts = 0x4,
+		SystemDiagnosticsContractsReference = 0x8,
+		SystemThreadingTasks = 0x10,
+		SystemMemory = 0x20,
+		BclAsyncInterfaces = 0x40,
+		NetReferenceAssemblies = 0x80,
+		TheraotCore = 0x100,
+
+		// Targeting flags
+		Package = 0x200,
+		Test = 0x400,
+		Minimal = 0x800,
+
+		// Presets
+		PackageAndTest = Package | Test,
+
+		Packages = Nullable
+		           | IsExternalInit
+		           | SystemDiagnosticsContracts
+		           | SystemDiagnosticsContractsReference
+		           | SystemThreadingTasks
+		           | SystemMemory
+		           | BclAsyncInterfaces
+		           | NetReferenceAssemblies
+		           | TheraotCore
+	}
+#>

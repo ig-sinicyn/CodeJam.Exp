@@ -1,0 +1,35 @@
+<Project>
+	<Import Project="..\..\build\Props\CodeJam.Targeting.props" />
+
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<LangVersion>11.0</LangVersion>
+		<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+		<CheckEolTargetFramework>false</CheckEolTargetFramework>
+	</PropertyGroup>
+
+	<!-- #region Targeting shims -->
+	<ItemGroup>
+		<PackageReference Condition=" '$(UseNullable)' == 'true'" Include="Nullable" Version="1.3.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Condition=" '$(UseIsExternalInit)' == 'true'" Include="IsExternalInit" Version="1.0.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Condition=" '$(UseSystemDiagnosticsContracts)' == 'true'" Include="System.Diagnostics.Contracts" Version="4.3.0" />
+		<PackageReference Condition=" '$(UseSystemThreadingTasks)' == 'true'" Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+		<PackageReference Condition=" '$(UseSystemMemory)' == 'true'" Include="System.Memory" Version="4.5.5" />
+		<PackageReference Condition=" '$(UseBclAsyncInterfaces)' == 'true'" Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+		<PackageReference Condition=" '$(UseNetReferenceAssemblies)' == 'true'" Include="microsoft.netframework.referenceassemblies" Version="1.0.3">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Condition=" '$(UseTheraotCore)' == 'true'" Include="Theraot.Core" Version="3.2.11" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Condition=" '$(UseSystemDiagnosticsReference)' == 'true'" Include="System.ComponentModel.DataAnnotations" />
+	</ItemGroup>
+	<!-- #endregion -->
+</Project>

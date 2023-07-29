@@ -1,16 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\build\Props\CodeJam.Targeting.props" />
-	<Import Project="..\..\build\Props\CodeJam.Publish.props" />
+	<Import Project="..\..\build\Targets\CodeJam.Targeting.targets" />
 
 	<PropertyGroup>
 		<AssemblyName>CodeJam.Light</AssemblyName>
 		<RootNamespace>CodeJam</RootNamespace>
 		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45;net40;net35</TargetFrameworks>
-		<Nullable>enable</Nullable>
-		<LangVersion>11.0</LangVersion>
-
-		<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
-		<CheckEolTargetFramework>false</CheckEolTargetFramework>
 
 		<PackageId>CodeJam.Light</PackageId>
 		<Title>CodeJam library (light version)</Title>
@@ -23,32 +17,8 @@
 		<PackageTags>list string collection data-structure threading xml reflection async assertion IO extension algorithms structures utilities suffix-tree range tagged-union discriminated union discriminated-union variant variant-record disjoint-union sum-type</PackageTags>
 	</PropertyGroup>
 
-	<!-- #region Targeting shims -->
 	<ItemGroup>
-		<PackageReference Condition=" '$(UseSystemThreadingTasksPackage)' == 'true'" Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
-		<PackageReference Condition=" '$(UseTheraot)' == 'true'" Include="Theraot.Core" Version="3.2.11" />
-		<PackageReference Condition=" '$(UseBclAsyncInterfaces)' == 'true'" Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
-		<PackageReference Condition=" '$(UsePackageReferences)' == 'true'" Include="microsoft.netframework.referenceassemblies" Version="1.0.3">
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Condition=" '$(UseLangInit)' == 'true'" Include="IsExternalInit" Version="1.0.3">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Condition=" '$(UseLangNullable)' == 'true'" Include="Nullable" Version="1.3.1">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Condition=" '$(UseSystemMemoryPackage)' == 'true'" Include="System.Memory" Version="4.5.5" />
-		<PackageReference Condition=" '$(UseSystemDiagnosticsPackage)' == 'true'" Include="System.Diagnostics.Contracts" Version="4.3.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Reference Condition=" '$(UseSystemDiagnosticsReference)' == 'true'" Include="System.ComponentModel.DataAnnotations" />
-	</ItemGroup>
-	<!-- #endregion -->
-
-	<ItemGroup>
+		<Compile Include="..\..\build\GlobalUsings.cs" Link="Properties\GlobalUsings.cs" />
 		<Compile Include="..\..\build\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
 	</ItemGroup>
 

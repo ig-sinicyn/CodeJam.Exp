@@ -2,9 +2,15 @@
 	<Import Project=".\Targets\empty.targets" />
 
 	<PropertyGroup>
+		<!-- Used by included files -->
 		<Nullable>enable</Nullable>
 		<LangVersion>10.0</LangVersion>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="GlobalTestUsings.cs" />
+	  <Compile Remove="GlobalUsings.cs" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />
@@ -12,6 +18,8 @@
 		<None Include="..\.gitignore" Link=".gitignore" />
 		<None Include="..\Directory.Build.props" Link="Props\Directory.Build.props" />
 		<None Include="..\Directory.Build.targets" Link="Targets\Directory.Build.targets" />
+		<None Include="GlobalTestUsings.cs" />
+		<None Include="GlobalUsings.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,11 +27,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="Props\CodeJam.Targeting.Config.ttinclude">
-			<DependentUpon>CodeJam.Targeting.tt</DependentUpon>
+		<None Update="Props\FullFeatured.Targeting.props">
+			<DependentUpon>FullFeatured.Targeting.tt</DependentUpon>
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
 		</None>
-		<None Update="Props\CodeJam.Targeting.Logic.ttinclude">
-			<DependentUpon>CodeJam.Targeting.tt</DependentUpon>
+		<None Update="Props\FullFeatured.Targeting.tt">
+			<LastGenOutput>FullFeatured.Targeting.props</LastGenOutput>
+			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
 		<None Update="Props\CodeJam.Targeting.props">
 			<DesignTime>True</DesignTime>
@@ -33,6 +44,12 @@
 		<None Update="Props\CodeJam.Targeting.tt">
 			<Generator>TextTemplatingFileGenerator</Generator>
 			<LastGenOutput>CodeJam.Targeting.props</LastGenOutput>
+		</None>
+		<None Update="T4\TargetingTemplate.Logic.ttinclude">
+			<DependentUpon>TargetingTemplate.ttinclude</DependentUpon>
+		</None>
+		<None Update="T4\TargetingTemplate.Models.ttinclude">
+			<DependentUpon>TargetingTemplate.ttinclude</DependentUpon>
 		</None>
 	</ItemGroup>
 </Project>

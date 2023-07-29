@@ -1,6 +1,10 @@
 <Project>
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
+
+		<!-- Used by included files -->
+		<Nullable>enable</Nullable>
+		<LangVersion>10.0</LangVersion>
 	</PropertyGroup>
 
 	<PropertyGroup>
