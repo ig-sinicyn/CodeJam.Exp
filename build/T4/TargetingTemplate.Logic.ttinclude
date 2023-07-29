@@ -35,7 +35,4 @@
 
 	private IEnumerable<KeyValuePair<string, Shims>> GetMonikerShims(Shims anyFilter) =>
 		GetAllMonikerShims().Where(x => (x.Value & anyFilter) != 0);
-
-	private static string FormatFlag(Shims shims, Shims filter) =>
-		shims.HasFlag(filter).ToString().ToLowerInvariant();
 #>
