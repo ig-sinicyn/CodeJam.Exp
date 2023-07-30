@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\build\Targets\CodeJam.Targeting.targets" />
+	<Import Project="..\..\build\Targets\Lightweight.Targeting.targets" />
 
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>

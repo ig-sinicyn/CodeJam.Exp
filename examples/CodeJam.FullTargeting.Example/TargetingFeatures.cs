@@ -60,7 +60,7 @@ public static class TargetingFeatures
 	public record RecordSample(int Value = 42);
 #endif
 
-	public record struct StructRecordSample(int Value = 42);
+	public readonly record struct StructRecordSample(int Value = 42);
 
 	#endregion
 
@@ -85,51 +85,77 @@ public static class TargetingFeatures
 
 	#endregion
 
-	#region IAsyncEnumerable
+	#region System.HashCode()
 
-#if NET45_OR_GREATER || TARGETS_NETSTANDARD || TARGETS_NETCOREAPP
-	public static async IAsyncEnumerable<int> EnumerateSampleAsync(
-		[EnumeratorCancellation] CancellationToken cancellation)
-	{
-		cancellation.ThrowIfCancellationRequested();
-		await TaskEx.Yield();
-		yield return 42;
-	}
-
-	public static async ValueTask<int> UseAsyncEnumeratorAsync(CancellationToken cancellation)
-	{
-		await foreach (var v in EnumerateSampleAsync(cancellation))
-		{
-			return v;
-		}
-
-		throw new InvalidOperationException("Should not be thrown");
-	}
-#endif
+	public static int HashCodeSample() => HashCode.Combine(1, 2);
 
 	#endregion
 
-	#region Index
+	#region System.Index
 
-	public static int[] ArraySliceSample()
+	public static int ArrayIndexSample()
 	{
-		var s = new Index(1);
-		var e = Index.FromEnd(1);
-		var r = new Range(s, e);
-		return new[] { 1, 2, 3, 4 }[r];
+		var index = 1;
+		return new[] { 1, 2, 3, 4 }[^index];
 	}
 
-	public static int[] ArraySliceSyntaxSample() => new[] { 1, 2, 3, 4 }[1..^1];
-
-	public static string StringSliceSample()
+	public static char StringIndexSample()
 	{
-		var s = new Index(1);
-		var e = Index.FromEnd(1);
-		var r = new Range(s, e);
-		return "Hello!"[r];
+		var index = 1;
+		return "Hello!"[^index];
 	}
 
-	public static string StringSliceSyntaxSample() => "Hello!"[1..^1];
+	public static int ListIndexSample()
+	{
+		var index = 1;
+		return new List<int> { 1, 2, 3, 4 }[^index];
+	}
+
+	public static int ArrayIndexTypeSample()
+	{
+		var index = Index.FromEnd(1);
+		return new[] { 1, 2, 3, 4 }[index];
+	}
+
+	public static char StringIndexTypeSample()
+	{
+		var index = Index.FromEnd(1);
+		return "Hello!"[index];
+	}
+
+	public static int ListIndexTypeSample()
+	{
+		var index = Index.FromEnd(1);
+		return new List<int> { 1, 2, 3, 4 }[index];
+	}
+
+	#endregion
+
+	#region System.Range
+
+	public static int[] ArrayRangeSample()
+	{
+		var index = 1;
+		return new[] { 1, 2, 3, 4 }[index..^index];
+	}
+
+	public static string StringRangeSample()
+	{
+		var index = 1;
+		return "Hello!"[index..^index];
+	}
+
+	public static int[] ArrayRangeTypeSample()
+	{
+		var range = new Range(1, Index.FromEnd(1));
+		return new[] { 1, 2, 3, 4 }[range];
+	}
+
+	public static string StringRangeTypeSample()
+	{
+		var range = new Range(1, Index.FromEnd(1));
+		return "Hello!"[range];
+	}
 
 	#endregion
 
@@ -161,6 +187,30 @@ public static class TargetingFeatures
 		var data = "Hello!".AsSpan();
 
 		return data[0];
+	}
+#endif
+
+	#endregion
+
+	#region IAsyncEnumerable
+
+#if NET45_OR_GREATER || TARGETS_NETSTANDARD || TARGETS_NETCOREAPP
+	public static async IAsyncEnumerable<int> EnumerateSampleAsync(
+		[EnumeratorCancellation] CancellationToken cancellation)
+	{
+		cancellation.ThrowIfCancellationRequested();
+		await TaskEx.Yield();
+		yield return 42;
+	}
+
+	public static async ValueTask<int> UseAsyncEnumeratorAsync(CancellationToken cancellation)
+	{
+		await foreach (var v in EnumerateSampleAsync(cancellation))
+		{
+			return v;
+		}
+
+		throw new InvalidOperationException("Should not be thrown");
 	}
 #endif
 

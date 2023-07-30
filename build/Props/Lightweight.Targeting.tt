@@ -1,0 +1,81 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Linq" #>
+<#@ include file = "..\T4\TargetingTemplate.ttinclude"#>
+<#@ output extension=".props" #><#
+
+	var targetingOptions = new TargetingOptions
+	{
+		DefaultFramework = "net6.0",
+		NetCoreShims =
+		{
+			["netcoreapp1.0"] = None,
+			["netcoreapp1.1"] = None,
+			["netcoreapp2.0"] = None,
+			["netcoreapp2.1"] = None,
+			["netcoreapp2.2"] = None,
+			["netcoreapp3.0"] = None,
+			["netcoreapp3.1"] = None | PackageAndTest,
+			["net5.0"] = None | Test,
+			["net6.0"] = None | PackageAndTest | Minimal,
+			["net7.0"] = None | PackageAndTest
+		},
+		NetStandardShims =
+		{
+			["netstandard1.0"] = None,
+			["netstandard1.1"] = None,
+			["netstandard1.2"] = None,
+			["netstandard1.3"] = None,
+			["netstandard1.4"] = None,
+			["netstandard1.5"] = None,
+			["netstandard1.6"] = None,
+			["netstandard2.0"] = IsExternalInit | Shims.Nullable | SystemThreadingTasks | Package | Minimal,
+			["netstandard2.1"] = IsExternalInit | Package
+		},
+		NetFrameworkShims =
+		{
+			["net11"] = None,
+			["net20"] = None,
+			["net35"] = None | PackageAndTest,
+			["net40"] = None | PackageAndTest,
+			["net403"] = None,
+			["net45"] = None | PackageAndTest,
+			["net451"] = None,
+			["net452"] = None,
+			["net46"] = None,
+			["net461"] = None | PackageAndTest | Minimal,
+			["net462"] = None,
+			["net47"] = None,
+			["net471"] = None,
+			["net472"] = None | PackageAndTest,
+			["net48"] = None | PackageAndTest
+		},
+		DefaultPackageVersions =
+		{
+			["FluentAssertions"] = "6.11.0",
+			["SystemMemory"] = "4.5.5"
+		},
+		PackageVersionOverrides =
+		{
+			["net461"] = new()
+			{
+				["SystemMemory"] = "4.5.1"
+			},
+			["net45"] = new()
+			{
+				["FluentAssertions"] = "5.10.3",
+				["SystemMemory"] = "4.5.1"
+			},
+			["net40"] = new()
+			{
+				["FluentAssertions"] = "4.19.4"
+			},
+			["net35"] = new()
+			{
+				["FluentAssertions"] = "2.2.0"
+			}
+		}
+	};
+
+	Emit(targetingOptions);
+#>
