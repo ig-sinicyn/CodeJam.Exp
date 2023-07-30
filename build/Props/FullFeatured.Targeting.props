@@ -203,10 +203,16 @@ he code is regenerated.
 	<!-- Assembly versions -->
 	<PropertyGroup>
 		<FluentAssertionsVersion>6.11.0</FluentAssertionsVersion>
+		<SystemMemoryVersion>4.5.5</SystemMemoryVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+		<SystemMemoryVersion>4.5.1</SystemMemoryVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
 		<FluentAssertionsVersion>5.10.3</FluentAssertionsVersion>
+		<SystemMemoryVersion>4.5.1</SystemMemoryVersion>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">

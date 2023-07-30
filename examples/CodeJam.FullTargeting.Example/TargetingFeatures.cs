@@ -149,7 +149,6 @@ public static class TargetingFeatures
 		return data[1];
 	}
 
-
 	public static int ArraySpanSample()
 	{
 		ReadOnlySpan<int> data = new[] { 1, 2, 3, 4 }.AsSpan();

@@ -20,7 +20,7 @@
 		</PackageReference>
 		<PackageReference Condition=" '$(UseSystemDiagnosticsContracts)' == 'true'" Include="System.Diagnostics.Contracts" Version="4.3.0" />
 		<PackageReference Condition=" '$(UseSystemThreadingTasks)' == 'true'" Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
-		<PackageReference Condition=" '$(UseSystemMemory)' == 'true'" Include="System.Memory" Version="4.5.5" />
+		<PackageReference Condition=" '$(UseSystemMemory)' == 'true'" Include="System.Memory" Version="$(SystemMemoryVersion)" />
 		<PackageReference Condition=" '$(UseBclAsyncInterfaces)' == 'true'" Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
 		<PackageReference Condition=" '$(UseNetReferenceAssemblies)' == 'true'" Include="microsoft.netframework.referenceassemblies" Version="1.0.3">
 			<PrivateAssets>all</PrivateAssets>
@@ -29,7 +29,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Reference Condition=" '$(UseSystemDiagnosticsReference)' == 'true'" Include="System.ComponentModel.DataAnnotations" />
+		<Reference Condition=" '$(UseSystemDiagnosticsContractsReference)' == 'true'" Include="System.ComponentModel.DataAnnotations" />
 	</ItemGroup>
 	<!-- #endregion -->
 </Project>

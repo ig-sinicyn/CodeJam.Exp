@@ -15,7 +15,6 @@ public class TargetingTests
 	}
 #endif
 
-
 #if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET40_OR_GREATER
 	[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 	public record Record(string Value)
@@ -49,7 +48,7 @@ public class TargetingTests
 	}
 
 #if NET45_OR_GREATER
-	public async IAsyncEnumerable<string?> EnumerateAsync()
+	private async IAsyncEnumerable<string?> EnumerateAsync()
 	{
 		await TaskEx.Delay(1);
 		yield return "Hello!";
@@ -68,8 +67,6 @@ public class TargetingTests
 	[UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
 	internal class CSharp10Features
 	{
-
-
 		[Pure, ContractsPure]
 		public async Task<string?> TaskAsync()
 		{
