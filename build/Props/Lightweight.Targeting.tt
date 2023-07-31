@@ -35,20 +35,20 @@
 		NetFrameworkShims =
 		{
 			["net11"] = None,
-			["net20"] = None,
-			["net35"] = None | PackageAndTest,
-			["net40"] = None | PackageAndTest,
-			["net403"] = None,
-			["net45"] = None | PackageAndTest,
-			["net451"] = None,
-			["net452"] = None,
-			["net46"] = None,
-			["net461"] = None | PackageAndTest | Minimal,
-			["net462"] = None,
-			["net47"] = None,
-			["net471"] = None,
-			["net472"] = None | PackageAndTest,
-			["net48"] = None | PackageAndTest
+			["net20"] = TheraotCore | NetReferenceAssemblies,
+			["net35"] = TheraotCore | NetReferenceAssemblies | PackageAndTest,
+			["net40"] = TheraotCore | NetReferenceAssemblies | PackageAndTest,
+			["net403"] = TheraotCore | NetReferenceAssemblies,
+			["net45"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | NetReferenceAssemblies | PackageAndTest,
+			["net451"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | NetReferenceAssemblies,
+			["net452"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | NetReferenceAssemblies,
+			["net46"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple,
+			["net461"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | PackageAndTest | Minimal,
+			["net462"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple,
+			["net47"] = InitAndNullable | SystemThreadingTasks,
+			["net471"] = InitAndNullable | SystemThreadingTasks,
+			["net472"] = InitAndNullable | SystemThreadingTasks | PackageAndTest,
+			["net48"] = InitAndNullable | SystemThreadingTasks | PackageAndTest
 		},
 		DefaultPackageVersions =
 		{

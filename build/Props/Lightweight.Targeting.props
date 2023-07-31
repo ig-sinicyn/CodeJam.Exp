@@ -141,6 +141,95 @@ he code is regenerated.
 		<UseSystemValueTuple>true</UseSystemValueTuple>
 	</PropertyGroup>
 
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
+		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
+		<UseTheraotCore>true</UseTheraotCore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
+		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
+		<UseTheraotCore>true</UseTheraotCore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
+		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
+		<UseTheraotCore>true</UseTheraotCore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'net20' ">
+		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
+		<UseTheraotCore>true</UseTheraotCore>
+	</PropertyGroup>
+
 	<!-- Assembly versions -->
 	<PropertyGroup>
 		<FluentAssertionsVersion>6.11.0</FluentAssertionsVersion>

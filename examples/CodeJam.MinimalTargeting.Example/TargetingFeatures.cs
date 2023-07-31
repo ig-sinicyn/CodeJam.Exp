@@ -57,7 +57,7 @@ public static class TargetingFeatures
 
 	#region Records
 
-#if NET40_OR_GREATER || NETSTANDARD20_OR_GREATER || NETCOREAPP20_OR_GREATER
+#if NETCOREAPP20_OR_GREATER || NETSTANDARD20_OR_GREATER || NET40_OR_GREATER
 	// No class records here, sorry.
 	// https://github.com/dotnet/roslyn/issues/55812
 	public record RecordSample(int Value = 42);
@@ -90,7 +90,7 @@ public static class TargetingFeatures
 
 	#region System.HashCode()
 
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP21_OR_GREATER
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
 	// System.HashCode is available as a part of
 	// .Net Standard 2.1 or .Net Core 2.1 or later versions
 	// We do want to keep code lightweight
@@ -176,7 +176,7 @@ public static class TargetingFeatures
 
 	#region Span
 
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP21_OR_GREATER
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
 	// Spans are available as a part of
 	// .Net Standard 2.1 or .Net Core 2.1 or later versions
 	// We do want to keep code lightweight
@@ -213,7 +213,7 @@ public static class TargetingFeatures
 
 	#region IAsyncEnumerable
 
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
+#if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER
 	// Async enumerables are available as a part of
 	// .Net Standard 2.1 or .Net Core 3.0 or later versions
 	// We do want to keep code lightweight

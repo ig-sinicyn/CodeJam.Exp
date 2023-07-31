@@ -1,5 +1,5 @@
 ﻿// BASEDON: https://github.com/dotnet/runtime/blob/bd83e17052d3c09022bad1d91dca860ca6b27ab9/src/libraries/System.Private.CoreLib/src/System/Range.cs
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
+#if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER || LESSTHAN_NET45
 [assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Index))]
 #else
 // Licensed to the .NET Foundation under one or more agreements.
@@ -152,7 +152,7 @@ namespace System
 
 		private string ToStringFromEnd()
 		{
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP21_OR_GREATER
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
 			Span<char> span = stackalloc char[11]; // 1 for ^ and 10 for longest possible uint value
 			bool formatted = ((uint)Value).TryFormat(span.Slice(1), out int charsWritten);
 			Debug.Assert(formatted);

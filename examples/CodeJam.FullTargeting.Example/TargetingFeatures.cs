@@ -54,7 +54,7 @@ public static class TargetingFeatures
 
 	#region Records
 
-#if NET40_OR_GREATER || NETSTANDARD16_OR_GREATER || NETCOREAPP20_OR_GREATER
+#if NETCOREAPP20_OR_GREATER || NETSTANDARD16_OR_GREATER || NET40_OR_GREATER
 	// No class records here, sorry.
 	// https://github.com/dotnet/roslyn/issues/55812
 	public record RecordSample(int Value = 42);
@@ -161,7 +161,7 @@ public static class TargetingFeatures
 
 	#region Span
 
-#if NET45_OR_GREATER || NETSTANDARD11_OR_GREATER || TARGETS_NETCOREAPP
+#if TARGETS_NETCOREAPP || NETSTANDARD11_OR_GREATER || NET45_OR_GREATER
 	public static int StackallocSpanSample()
 	{
 		Span<byte> data = stackalloc byte[] { 1, 2, 3, 4 };
@@ -194,7 +194,7 @@ public static class TargetingFeatures
 
 	#region IAsyncEnumerable
 
-#if NET45_OR_GREATER || TARGETS_NETSTANDARD || TARGETS_NETCOREAPP
+#if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET45_OR_GREATER
 	public static async IAsyncEnumerable<int> EnumerateSampleAsync(
 		[EnumeratorCancellation] CancellationToken cancellation)
 	{

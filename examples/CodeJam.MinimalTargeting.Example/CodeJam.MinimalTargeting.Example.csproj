@@ -2,7 +2,7 @@
 	<Import Project="..\..\build\Targets\Lightweight.Targeting.targets" />
 
 	<PropertyGroup>
-		<TargetFrameworks>netcoreapp1.0</TargetFrameworks>
+		<TargetFrameworks>net20</TargetFrameworks>
 	</PropertyGroup>
 
 	<ItemGroup>

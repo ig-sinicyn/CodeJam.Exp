@@ -13,7 +13,7 @@ public partial class StringExtensions
 	/// </summary>
 	[Pure, ContractsPure]
 	internal static string ReplaceOrdinal(this string str, string oldValue, string newValue) =>
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
+#if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER
 		str.Replace(oldValue, newValue, StringComparison.Ordinal)
 #else
 		str.Replace(oldValue, newValue)
@@ -25,7 +25,7 @@ public partial class StringExtensions
 	/// </summary>
 	[Pure, ContractsPure]
 	internal static bool ContainsOrdinal(this string str, char value) =>
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
+#if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER
 		str.Contains(value, StringComparison.Ordinal)
 #else
 		str.IndexOf(value) >= 0

@@ -1,7 +1,6 @@
 ﻿// BASEDON: https://github.com/dotnet/runtime/blob/bd83e17052d3c09022bad1d91dca860ca6b27ab9/src/libraries/System.Private.CoreLib/src/System/Index.cs
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
+#if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER || LESSTHAN_NET45
 [assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Range))]
-
 #else
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
@@ -58,7 +57,7 @@ namespace System
 		/// <summary>Returns the hash code for this instance.</summary>
 		public override int GetHashCode()
 		{
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP21_OR_GREATER
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
 			return HashCode.Combine(Start.GetHashCode(), End.GetHashCode());
 #else
 			return HashHelpers.Combine(Start.GetHashCode(), End.GetHashCode());
@@ -68,7 +67,7 @@ namespace System
 		/// <summary>Converts the value of the current Range object to its equivalent string representation.</summary>
 		public override string ToString()
 		{
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP21_OR_GREATER
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
 			Span<char> span = stackalloc char[2 + (2 * 11)]; // 2 for "..", then for each index 1 for '^' and 10 for longest possible uint
 			int pos = 0;
 
