@@ -23,15 +23,56 @@ he code is regenerated.
 
 	<!-- Package reference switches -->
 	<PropertyGroup>
-		<UseNullable>false</UseNullable>
 		<UseIsExternalInit>false</UseIsExternalInit>
+		<UseNullable>false</UseNullable>
 		<UseSystemDiagnosticsContracts>false</UseSystemDiagnosticsContracts>
 		<UseSystemDiagnosticsContractsReference>false</UseSystemDiagnosticsContractsReference>
 		<UseSystemThreadingTasks>false</UseSystemThreadingTasks>
+		<UseSystemValueTuple>false</UseSystemValueTuple>
 		<UseSystemMemory>false</UseSystemMemory>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UseNetReferenceAssemblies>false</UseNetReferenceAssemblies>
 		<UseTheraotCore>false</UseTheraotCore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.1' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.1' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp1.0' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
@@ -39,9 +80,65 @@ he code is regenerated.
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-		<UseNullable>true</UseNullable>
 		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
+		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemValueTuple>true</UseSystemValueTuple>
 	</PropertyGroup>
 
 	<!-- Assembly versions -->

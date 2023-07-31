@@ -18,12 +18,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Include="..\..\build\GlobalUsings.cs" Link="Properties\GlobalUsings.cs" />
-		<Compile Include="..\..\build\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
+		<Compile Include="..\..\build\Shared\GlobalUsings.cs" Link="Properties\GlobalUsings.cs" />
+		<Compile Include="..\..\build\Shared\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\..\build\images\nuget\CodeJam.Main.Icon.png">
+		<None Include="..\..\build\Images\nuget\CodeJam.Main.Icon.png">
 			<Pack>true</Pack>
 			<PackagePath>icon.png</PackagePath>
 		</None>

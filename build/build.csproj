@@ -25,8 +25,8 @@
 		<None Include="..\.gitignore" Link=".gitignore" />
 		<None Include="..\Directory.Build.props" Link="Props\Directory.Build.props" />
 		<None Include="..\Directory.Build.targets" Link="Targets\Directory.Build.targets" />
-		<None Include="GlobalTestUsings.cs" />
-		<None Include="GlobalUsings.cs" />
+		<None Include="Shared\GlobalTestUsings.cs" />
+		<None Include="Shared\GlobalUsings.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

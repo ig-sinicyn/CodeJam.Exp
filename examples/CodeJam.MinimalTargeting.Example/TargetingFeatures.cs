@@ -18,6 +18,9 @@ public static class TargetingFeatures
 
 	#region Tasks and async
 
+	// ValueTasks are part of .Net Standard 2.1 or .Net Core 1.0 or later versions
+	// We do reference System.Threading.Tasks.Extensions for other frameworks
+
 	public static Task TaskSampleAsync(CancellationToken cancellation) => TaskEx.Delay(1, cancellation);
 
 	public static Task<int> TaskOfTSampleAsync(CancellationToken cancellation) => TaskEx.FromResult(42);
@@ -54,7 +57,7 @@ public static class TargetingFeatures
 
 	#region Records
 
-#if NET40_OR_GREATER || NETSTANDARD16_OR_GREATER || NETCOREAPP20_OR_GREATER
+#if NET40_OR_GREATER || NETSTANDARD20_OR_GREATER || NETCOREAPP20_OR_GREATER
 	// No class records here, sorry.
 	// https://github.com/dotnet/roslyn/issues/55812
 	public record RecordSample(int Value = 42);
@@ -88,8 +91,18 @@ public static class TargetingFeatures
 	#region System.HashCode()
 
 #if NETSTANDARD21_OR_GREATER || NETCOREAPP21_OR_GREATER
+	// System.HashCode is available as a part of
+	// .Net Standard 2.1 or .Net Core 2.1 or later versions
+	// We do want to keep code lightweight
+	// so we do not reference additional packages here
 	public static int HashCodeSample() => HashCode.Combine(1, 2);
 #endif
+
+	#endregion
+
+	#region System.ValueTuple
+
+	public static (int a, int b) TupleSample() => (1, 2);
 
 	#endregion
 
@@ -113,7 +126,6 @@ public static class TargetingFeatures
 		return new List<int> { 1, 2, 3, 4 }[^index];
 	}
 
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
 	public static int ArrayIndexTypeSample()
 	{
 		var index = Index.FromEnd(1);
@@ -131,7 +143,6 @@ public static class TargetingFeatures
 		var index = Index.FromEnd(1);
 		return new List<int> { 1, 2, 3, 4 }[index];
 	}
-#endif
 
 	#endregion
 
@@ -149,7 +160,6 @@ public static class TargetingFeatures
 		return "Hello!"[index..^index];
 	}
 
-#if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
 	public static int[] ArrayRangeTypeSample()
 	{
 		var range = new Range(1, Index.FromEnd(1));
@@ -161,13 +171,16 @@ public static class TargetingFeatures
 		var range = new Range(1, Index.FromEnd(1));
 		return "Hello!"[range];
 	}
-#endif
 
 	#endregion
 
 	#region Span
 
 #if NETSTANDARD21_OR_GREATER || NETCOREAPP21_OR_GREATER
+	// Spans are available as a part of
+	// .Net Standard 2.1 or .Net Core 2.1 or later versions
+	// We do want to keep code lightweight
+	// so we do not reference additional packages here
 	public static int StackallocSpanSample()
 	{
 		Span<byte> data = stackalloc byte[] { 1, 2, 3, 4 };
@@ -201,6 +214,10 @@ public static class TargetingFeatures
 	#region IAsyncEnumerable
 
 #if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
+	// Async enumerables are available as a part of
+	// .Net Standard 2.1 or .Net Core 3.0 or later versions
+	// We do want to keep code lightweight
+	// so we do not reference additional packages here
 	public static async IAsyncEnumerable<int> EnumerateSampleAsync(
 		[EnumeratorCancellation] CancellationToken cancellation)
 	{

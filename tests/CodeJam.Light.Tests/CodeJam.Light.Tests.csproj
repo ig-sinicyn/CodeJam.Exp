@@ -12,8 +12,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Include="..\..\build\GlobalTestUsings.cs" Link="Properties\GlobalTestUsings.cs" />
-		<Compile Include="..\..\build\RuntimeHelpers.cs" Link="Properties\RuntimeHelpers.cs" />
+		<Compile Include="..\..\build\Shared\GlobalTestUsings.cs" Link="Properties\GlobalTestUsings.cs" />
+		<Compile Include="..\..\build\Shared\IndexRange\RuntimeHelpers.cs" Link="Properties\RuntimeHelpers.cs" />
 	</ItemGroup>
 
 </Project>

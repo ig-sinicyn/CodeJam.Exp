@@ -1,12 +1,14 @@
 ﻿// BASEDON: https://github.com/dotnet/runtime/blob/bd83e17052d3c09022bad1d91dca860ca6b27ab9/src/libraries/System.Private.CoreLib/src/System/Index.cs
 #if NETSTANDARD21_OR_GREATER || NETCOREAPP30_OR_GREATER
-[assembly: TypeForwardedTo(typeof(System.Range))]
+[assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Range))]
+
 #else
 // Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
 
 #if NETSTANDARD2_0
