@@ -3,6 +3,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net20</TargetFrameworks>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
 	<ItemGroup>

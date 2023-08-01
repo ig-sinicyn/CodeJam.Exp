@@ -1,5 +1,6 @@
 ﻿// BASEDON: https://gist.github.com/bgrainger/fb2c18659c2cdfce494c82a8c4803360
 // (taken from https://github.com/bgrainger/IndexRange readme)
+
 #if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER
 [assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Runtime.CompilerServices.RuntimeHelpers))]
 #else
@@ -50,6 +51,23 @@ internal static class RuntimeHelpers
 			Array.Copy(array, offset, dest, 0, length);
 			return dest;
 		}
+	}
+
+	// Used for pinning strings (e.g. `fixed (char* res = result) {}`)
+	[Obsolete("OffsetToStringData has been deprecated. Use string.GetPinnableReference() instead.")]
+	public static int OffsetToStringData
+	{
+		// This offset is baked in by string indexer intrinsic, so there is no harm
+		// in getting it baked in here as well.
+		get =>
+			// Number of bytes from the address pointed to by a reference to
+			// a String to the first 16-bit character in the String.  Skip
+			// over the MethodTable pointer, & String
+			// length.  Of course, the String reference points to the memory
+			// after the sync block, so don't count that.
+			// This property allows C#'s fixed statement to work on Strings.
+			// On 64 bit platforms, this should be 12 (8+4) and on 32 bit 8 (4+4).
+			IntPtr.Size == 8 ? 12 : 8;
 	}
 }
 #endif

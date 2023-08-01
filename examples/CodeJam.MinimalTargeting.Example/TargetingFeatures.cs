@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -13,6 +14,17 @@ public static class TargetingFeatures
 
 	[System.Diagnostics.Contracts.Pure]
 	public static int ContractsSample() => 42;
+
+	#endregion
+
+	#region System.ComponentModel.Annotations
+
+	public enum SampleEnum
+	{
+		[Display(Name = "Sample Value")]
+		[Required]
+		SampleValue = 0,
+	}
 
 	#endregion
 
@@ -75,6 +87,21 @@ public static class TargetingFeatures
 	{
 		result = default!;
 		return true;
+	}
+
+	[Pure, ContractsPure]
+	[CollectionAccess(CollectionAccessType.Read)]
+	public static TValue? DictionaryExtensionSample<TKey, TValue>(
+		this IReadOnlyDictionary<TKey, TValue> dictionary,
+		TKey key,
+		TValue? defaultValue)
+			where TKey : notnull
+	{
+		Code.NotNull(dictionary, nameof(dictionary));
+
+		return dictionary.TryGetValue(key, out var result)
+			? result
+			: defaultValue;
 	}
 
 	#endregion

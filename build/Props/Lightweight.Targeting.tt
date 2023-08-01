@@ -22,33 +22,33 @@
 		},
 		NetStandardShims =
 		{
-			["netstandard1.0"] = InitAndNullable | ContractsTasksAndTuple,
-			["netstandard1.1"] = InitAndNullable | ContractsTasksAndTuple,
-			["netstandard1.2"] = InitAndNullable | ContractsTasksAndTuple,
-			["netstandard1.3"] = InitAndNullable | ContractsTasksAndTuple,
-			["netstandard1.4"] = InitAndNullable | ContractsTasksAndTuple,
-			["netstandard1.5"] = InitAndNullable | ContractsTasksAndTuple,
-			["netstandard1.6"] = InitAndNullable | ContractsTasksAndTuple,
-			["netstandard2.0"] = InitAndNullable | SystemThreadingTasks | Package | Minimal,
-			["netstandard2.1"] = IsExternalInit | Package
+			["netstandard1.0"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
+			["netstandard1.1"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
+			["netstandard1.2"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
+			["netstandard1.3"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
+			["netstandard1.4"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
+			["netstandard1.5"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
+			["netstandard1.6"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
+			["netstandard2.0"] = InitAndNullable | SystemThreadingTasks | SystemDiagnosticsContracts | SystemComponentModelAnnotations | Package | Minimal,
+			["netstandard2.1"] = IsExternalInit | SystemComponentModelAnnotations | Package
 		},
 		NetFrameworkShims =
 		{
 			["net11"] = None,
-			["net20"] = TheraotCore | NetReferenceAssemblies,
-			["net35"] = TheraotCore | NetReferenceAssemblies | PackageAndTest,
-			["net40"] = TheraotCore | NetReferenceAssemblies | PackageAndTest,
-			["net403"] = TheraotCore | NetReferenceAssemblies,
-			["net45"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | NetReferenceAssemblies | PackageAndTest,
-			["net451"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | NetReferenceAssemblies,
-			["net452"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | NetReferenceAssemblies,
-			["net46"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple,
-			["net461"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple | PackageAndTest | Minimal,
-			["net462"] = InitAndNullable | SystemThreadingTasks | SystemValueTuple,
-			["net47"] = InitAndNullable | SystemThreadingTasks,
-			["net471"] = InitAndNullable | SystemThreadingTasks,
-			["net472"] = InitAndNullable | SystemThreadingTasks | PackageAndTest,
-			["net48"] = InitAndNullable | SystemThreadingTasks | PackageAndTest
+			["net20"] = TheraotCore | NetReferenceAssemblies | SystemComponentModelAnnotationsReference,
+			["net35"] = TheraotCore | NetReferenceAssemblies | SystemComponentModelAnnotationsReference | PackageAndTest,
+			["net40"] = TheraotCore | NetReferenceAssemblies | SystemComponentModelAnnotationsReference | PackageAndTest,
+			["net403"] = TheraotCore | NetReferenceAssemblies | SystemComponentModelAnnotationsReference,
+			["net45"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | SystemValueTuple | NetReferenceAssemblies | PackageAndTest,
+			["net451"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | SystemValueTuple | NetReferenceAssemblies,
+			["net452"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | SystemValueTuple | NetReferenceAssemblies,
+			["net46"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | SystemValueTuple,
+			["net461"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | SystemValueTuple | PackageAndTest | Minimal,
+			["net462"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | SystemValueTuple,
+			["net47"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference,
+			["net471"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference,
+			["net472"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | PackageAndTest,
+			["net48"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotationsReference | PackageAndTest
 		},
 		DefaultPackageVersions =
 		{

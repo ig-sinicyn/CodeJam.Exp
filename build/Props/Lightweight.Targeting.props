@@ -29,6 +29,8 @@ he code is regenerated.
 		<UseSystemDiagnosticsContractsReference>false</UseSystemDiagnosticsContractsReference>
 		<UseSystemThreadingTasks>false</UseSystemThreadingTasks>
 		<UseSystemValueTuple>false</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>false</UseSystemComponentModelAnnotations>
+		<UseSystemComponentModelAnnotationsReference>false</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>false</UseSystemMemory>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UseNetReferenceAssemblies>false</UseNetReferenceAssemblies>
@@ -77,12 +79,15 @@ he code is regenerated.
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
 		<UseNullable>true</UseNullable>
+		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
@@ -91,6 +96,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
@@ -99,6 +105,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
@@ -107,6 +114,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
@@ -115,6 +123,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
@@ -123,6 +132,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
@@ -131,6 +141,7 @@ he code is regenerated.
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
@@ -139,30 +150,35 @@ he code is regenerated.
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
@@ -170,6 +186,7 @@ he code is regenerated.
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
@@ -177,6 +194,7 @@ he code is regenerated.
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
@@ -184,6 +202,7 @@ he code is regenerated.
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
@@ -191,6 +210,7 @@ he code is regenerated.
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 	</PropertyGroup>
 
@@ -199,6 +219,7 @@ he code is regenerated.
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 	</PropertyGroup>
 
@@ -207,25 +228,30 @@ he code is regenerated.
 		<UseNullable>true</UseNullable>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemValueTuple>true</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net20' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>

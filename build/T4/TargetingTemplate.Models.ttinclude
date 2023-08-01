@@ -32,15 +32,17 @@
 		SystemDiagnosticsContractsReference = 0x8,
 		SystemThreadingTasks = 0x10,
 		SystemValueTuple = 0x20,
-		SystemMemory = 0x40,
-		BclAsyncInterfaces = 0x80,
-		NetReferenceAssemblies = 0x100,
-		TheraotCore = 0x200,
+		SystemComponentModelAnnotations = 0x40,
+		SystemComponentModelAnnotationsReference = 0x80,
+		SystemMemory = 0x100,
+		BclAsyncInterfaces = 0x200,
+		NetReferenceAssemblies = 0x400,
+		TheraotCore = 0x800,
 
 		// Targeting flags
-		Package = 0x400,
-		Test = 0x800,
-		Minimal = 0x1000,
+		Package = 0x1000,
+		Test = 0x2000,
+		Minimal = 0x4000,
 
 		// Presets
 		InitAndNullable = IsExternalInit | Nullable,
@@ -52,6 +54,8 @@
 		               | SystemDiagnosticsContractsReference
 		               | SystemThreadingTasks
 		               | SystemValueTuple
+		               | SystemComponentModelAnnotations
+		               | SystemComponentModelAnnotationsReference
 		               | SystemMemory
 		               | BclAsyncInterfaces
 		               | NetReferenceAssemblies
