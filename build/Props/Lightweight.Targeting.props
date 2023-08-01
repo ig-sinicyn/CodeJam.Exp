@@ -85,7 +85,6 @@ he code is regenerated.
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
 		<UseNullable>true</UseNullable>
-		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
 		<UseSystemThreadingTasks>true</UseSystemThreadingTasks>
 		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>

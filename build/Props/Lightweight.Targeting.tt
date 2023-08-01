@@ -29,7 +29,7 @@
 			["netstandard1.4"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
 			["netstandard1.5"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
 			["netstandard1.6"] = InitAndNullable | ContractsTasksAndTuple | SystemComponentModelAnnotations,
-			["netstandard2.0"] = InitAndNullable | SystemThreadingTasks | SystemDiagnosticsContracts | SystemComponentModelAnnotations | Package | Minimal,
+			["netstandard2.0"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotations | Package | Minimal,
 			["netstandard2.1"] = IsExternalInit | SystemComponentModelAnnotations | Package
 		},
 		NetFrameworkShims =

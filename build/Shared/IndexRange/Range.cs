@@ -7,7 +7,6 @@
 
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
 
 #if NETSTANDARD2_0
