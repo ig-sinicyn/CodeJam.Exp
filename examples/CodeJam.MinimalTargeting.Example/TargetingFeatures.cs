@@ -95,14 +95,10 @@ public static class TargetingFeatures
 		this IReadOnlyDictionary<TKey, TValue> dictionary,
 		TKey key,
 		TValue? defaultValue)
-			where TKey : notnull
-	{
-		Code.NotNull(dictionary, nameof(dictionary));
-
-		return dictionary.TryGetValue(key, out var result)
+			where TKey : notnull =>
+		dictionary.TryGetValue(key, out var result)
 			? result
 			: defaultValue;
-	}
 
 	#endregion
 

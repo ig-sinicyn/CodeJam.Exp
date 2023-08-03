@@ -8,11 +8,5 @@ configuration: Debug
 nuget:
   disable_publish_on_pr: true
   disable_publish_octopus: true
-build:
-  project: ./CodeJam.Light.sln
-  publish_nuget: false
-  publish_nuget_symbols: false
-  use_snupkg_format: false
-  include_nuget_references: false
-  parallel: true
-  verbosity: minimal
+build_script:
+- ps: dotnet build ./CodeJam.Light.sln
