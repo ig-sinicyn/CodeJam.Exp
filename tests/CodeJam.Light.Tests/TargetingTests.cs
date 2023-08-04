@@ -1,3 +1,6 @@
+using NUnit.Framework.Internal;
+
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace CodeJam.Tests;
@@ -148,5 +151,43 @@ public class TargetingTests
 
 		a.Should().Be(1);
 		b.Should().Be("2");
+	}
+
+	[Test]
+	public static void PrintQuirks()
+	{
+		var assembly = typeof(int).Assembly;
+
+		var desc =
+#if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET46_OR_GREATER
+			System.Runtime.InteropServices.RuntimeInformation.FrameworkDescription;
+#else
+			"no description";
+#endif
+		Console.WriteLine($"Runtime v{Environment.Version} ({desc})");
+		Console.WriteLine($"{PlatformHelper.TargetPlatform}. Running on {assembly}");
+		Console.WriteLine();
+		PrintProps("System.Runtime.Versioning.BinaryCompatibility");
+		Console.WriteLine();
+		PrintProps("System.CompatibilitySwitches");
+		Console.WriteLine();
+		PrintProps("System.AppContextSwitches");
+	}
+
+	private static void PrintProps(string typeName)
+	{
+		var type = typeof(int).Assembly.GetType(typeName);
+		if (type == null)
+		{
+			Console.WriteLine($"No type {typeName} found.");
+			return;
+		}
+
+		Console.WriteLine(type.Name);
+		var bf = BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
+		foreach (var prop in type.GetProperties(bf))
+		{
+			Console.WriteLine($"\t * {prop.Name}: {prop.GetValue(null, null)}");
+		}
 	}
 }
