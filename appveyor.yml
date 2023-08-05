@@ -8,5 +8,10 @@ configuration: Debug
 nuget:
   disable_publish_on_pr: true
   disable_publish_octopus: true
+environment:
+  APPVEYOR_RDP_PASSWORD: test-me
 build_script:
 - ps: dotnet build ./CodeJam.Light.sln
+test: off
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
