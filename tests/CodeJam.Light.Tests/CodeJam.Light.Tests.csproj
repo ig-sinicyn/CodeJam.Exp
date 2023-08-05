@@ -6,7 +6,7 @@
 		<RootNamespace>CodeJam.Tests</RootNamespace>
 		<TargetFrameworks>net6.0;net7.0;net5.0;netcoreapp3.1;net48;net472;net461;net45;net40;net35</TargetFrameworks>
 
-		<AssemblyName Condition=" '$(APPVEYOR)' != '' ">CodeJam.Light.$(TargetFramework).Tests</AssemblyName>
+		<TargetName Condition=" '$(APPVEYOR)' != '' ">CodeJam.Light.$(TargetFramework).Tests</TargetName>
 	</PropertyGroup>
 
 	<ItemGroup>
