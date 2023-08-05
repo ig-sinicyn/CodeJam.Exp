@@ -9,7 +9,7 @@ nuget:
   disable_publish_on_pr: true
   disable_publish_octopus: true
 environment:
-  APPVEYOR_RDP_PASSWORD: test-me
+  APPVEYOR_RDP_PASSWORD: test-me-123!
 build_script:
 - ps: dotnet build ./CodeJam.Light.sln
 test: off
