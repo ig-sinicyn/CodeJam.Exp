@@ -1,13 +1,13 @@
 # Run .Net Framework tests
 $logFilePath = '.artifacts\nunit-netfw-results.xml'
 $testDlls = ls -r '.artifacts\*\Debug\*.Tests.dll' | ? FullName -match '\\net\d+\\' `
-  | % FullName | sort-object -Unique
+  | % FullName | Sort-Object -Unique
 nunit3-console $testDlls --result=$logFilePath
 
 ## replace assemply name in tests
 $matchPattern = 'name="(?''name''.*?)\.dll" (?''rest''fullname=".*?\\(?''fw''net[^\\]*)\\[^\\]*?\.dll")'
 $replacement = 'name="${name} (${fw}).dll" ${rest}'
-cat -path $logFilePath | ??? -Replace $matchPattern, $replacement | > $logFilePath
+cat $logFilePath -Replace $matchPattern, $replacement | > $logFilePath
 
 
 # Run .Net Core tests
@@ -21,6 +21,6 @@ dotnet vstest $testDlls --results-directory '.\.artifacts\' --logger 'trx;LogFil
 $wc = New-Object 'System.Net.WebClient'
 $testResults = ls *.artifacts\nunit-*.xml | % FullName | sort-object -Unique
 foreach ($testResult in $testResults) {
-  echo 'UploadFile: https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID from $testResult'
-  $wc.UploadFile('https://ci.appveyor.com/api/testresults/nunit3/$($env:APPVEYOR_JOB_ID)', $testResult)  
+  echo "UploadFile: https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID from $testResult"
+  $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit3/$($env:APPVEYOR_JOB_ID)", $testResult)  
 }
