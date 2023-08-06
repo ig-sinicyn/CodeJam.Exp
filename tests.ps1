@@ -7,7 +7,7 @@ nunit3-console $testDlls --result=$logFilePath
 ## replace assemply name in tests
 $matchPattern = 'name="(?''name''.*?)\.dll" (?''rest''fullname=".*?\\(?''fw''net[^\\]*)\\[^\\]*?\.dll")'
 $replacement = 'name="${name} (${fw}).dll" ${rest}'
-cat $logFilePath -Replace $matchPattern, $replacement | > $logFilePath
+cat $logFilePath -Replace $matchPattern, $replacement | Out-File $logFilePath
 
 
 # Run .Net Core tests
