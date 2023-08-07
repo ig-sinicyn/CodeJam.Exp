@@ -5,10 +5,9 @@ $testDlls = ls -r '.artifacts\*\Debug\*.Tests.dll' | ? FullName -match '\\net\d+
 nunit3-console $testDlls --result=$logFilePath
 
 ## replace assemply name in tests
-$matchPattern = 'name="(?''name''.*?)\.dll" (?''rest''fullname=".*?\\(?''fw''net[^\\]*)\\[^\\]*?\.dll")'
-$replacement = 'name="${name} (${fw}).dll" ${rest}'
-cat $logFilePath -Replace $matchPattern, $replacement | Out-File $logFilePath
-
+$matchPattern = 'name="(?''name''.*?)\.dll" fullname="(?''fullname''.*?\\(?''fw''net[^\\]*)\\[^\\]*?)\.dll"'
+$replacement = 'name="${name} (${fw}).dll" fullname="${fullname} (${fw}).dll"'
+(cat $logFilePath) -Replace $matchPattern, $replacement | Out-File -Encoding UTF8 $logFilePath
 
 # Run .Net Core tests
 $testDlls = ls -r '.artifacts\*\Debug\*.Tests.dll' | ? FullName -notmatch '\\net\d+\\' `
