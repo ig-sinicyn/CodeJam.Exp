@@ -43,5 +43,5 @@ $testResults = ls '.artifacts\nunit_*.xml' | % FullName
 $testResults += ls '.artifacts\nunit_*.trx' | % FullName
 $testResults | ForEach-Object {
   echo "UploadFile: https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID from $_"
-  $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit3/$($env:APPVEYOR_JOB_ID)", $_)
+  $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID", $_)
 }
