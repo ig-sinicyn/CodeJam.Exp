@@ -8,7 +8,6 @@
   *
 #>
 
-<#
 # Run .Net Framework tests using nunit3-console
 ## We use nunit-console here as as dotnet test does not support legacy net frameworks
 $testNetFwDlls = ls -r '.artifacts\*\Debug\*.Tests.dll' | ? FullName -match '\\net\d+\\' ` | % FullName
@@ -35,7 +34,7 @@ $netCoreReports = ls '.artifacts\nunit_*.trx' | % FullName
 $netCoreReports | ForEach-Object {
   (cat $_) -Replace $matchPattern1, $replacement1  -Replace $matchPattern2, $replacement2 | Out-File -Encoding UTF8 $_
 }
-#>
+
 
 # Upload files
 $wc = New-Object 'System.Net.WebClient'
