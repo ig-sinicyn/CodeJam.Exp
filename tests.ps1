@@ -37,13 +37,10 @@ $netCoreReports | ForEach-Object {
   (cat $_) -Replace $matchPattern1, $replacement1  -Replace $matchPattern2, $replacement2 | Out-File -Encoding UTF8 $_
 }
 
-## rename trx (AppVeyor supports only .xml files)
-ls '.artifacts\nunit_*.trx' | Rename-Item -NewName { $_.Name -replace '\.trx$','.xml' }
-
 # Upload files
 $wc = New-Object 'System.Net.WebClient'
-$testResults = ls '.artifacts\nunit_*.xml' | % FullName
+$testResults = ls '.artifacts\nunit_*.trx' | % FullName
 $testResults | ForEach-Object {
-  echo "UploadFile: https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID from $_"
-  $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID", $_)
+  echo "UploadFile: https://ci.appveyor.com/api/testresults/mstest/$env:APPVEYOR_JOB_ID from $_"
+  $wc.UploadFile("https://ci.appveyor.com/api/testresults/mstest/$env:APPVEYOR_JOB_ID", $_)
 }
