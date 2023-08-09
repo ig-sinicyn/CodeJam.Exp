@@ -8,7 +8,7 @@
   *
 #>
 
-<#
+
 # Run .Net Framework tests using nunit3-console
 ## We use nunit-console here as as dotnet test does not support legacy net frameworks
 $testNetFwDlls = ls -r '.artifacts\*\Debug\*.Tests.dll' | ? FullName -match '\\net\d+\\' ` | % FullName
@@ -17,9 +17,9 @@ nunit3-console $testNetFwDlls --result=$logFilePath
 
 ## Update test report: add TFM to the assemply name
 $matchPattern = 'name="(?''name''.*?\.dll)" fullname="(?''fullname''.*?\\(?''tfm''net[^\\]*)\\[^\\]*?\.dll)"'
-$replacement = 'name="${name} (${tfm})" fullname="${fullname} (${fw})"'
+$replacement = 'name="${name} (${tfm})" fullname="${fullname} (${tfm})"'
 (cat $logFilePath) -Replace $matchPattern, $replacement | Out-File -Encoding UTF8 $logFilePath
-#>
+
 
 # Run .Net Core tests
 ## Emits multiple test reports
@@ -37,8 +37,14 @@ $netCoreReports | ForEach-Object {
   (cat $_) -Replace $matchPattern1, $replacement1  -Replace $matchPattern2, $replacement2 | Out-File -Encoding UTF8 $_
 }
 
+
 # Upload files
 $wc = New-Object 'System.Net.WebClient'
+$testResults = @(ls '.artifacts\nunit_*.xml' | % FullName)
+$testResults | ForEach-Object {
+  echo "UploadFile: https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID from $_"
+  $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID", $_)
+}
 $testResults = ls '.artifacts\nunit_*.trx' | % FullName
 $testResults | ForEach-Object {
   echo "UploadFile: https://ci.appveyor.com/api/testresults/mstest/$env:APPVEYOR_JOB_ID from $_"
