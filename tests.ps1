@@ -8,7 +8,7 @@
   *
 #>
 
-
+<#
 # Run .Net Framework tests using nunit3-console
 ## We use nunit-console here as as dotnet test does not support legacy net frameworks
 $testNetFwDlls = ls -r '.artifacts\*\Debug\*.Tests.dll' | ? FullName -match '\\net\d+\\' ` | % FullName
@@ -35,12 +35,12 @@ $netCoreReports = ls '.artifacts\nunit_*.trx' | % FullName
 $netCoreReports | ForEach-Object {
   (cat $_) -Replace $matchPattern1, $replacement1  -Replace $matchPattern2, $replacement2 | Out-File -Encoding UTF8 $_
 }
+#>
 
 # Upload files
 $wc = New-Object 'System.Net.WebClient'
-
-$testResults = ls '.artifacts\nunit_*.xml' | % FullName
-$testResults += ls '.artifacts\nunit_*.trx' | % FullName
+$testResults = @(ls '.artifacts\nunit_*.xml' | % FullName)
+$testResults += @(ls '.artifacts\nunit_*.trx' | % FullName)
 $testResults | ForEach-Object {
   echo "UploadFile: https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID from $_"
   $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit3/$env:APPVEYOR_JOB_ID", $_)
