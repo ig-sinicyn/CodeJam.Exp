@@ -29,9 +29,9 @@ dotnet test .\CodeJam.Light.sln -p:NetCoreTests=true --no-build --no-restore `
 
 ## Update test reports: add TFM to the assemply name
 $matchPattern1 = 'storage="(?''storage''.*?\\(?''tfm''net[^\\]*)\\[^\\]*?\.dll)"'
-$replacement1 = 'storage="${storage} (${tfm}).dll"'
+$replacement1 = 'storage="${storage} (${tfm})"'
 $matchPattern2 = 'codeBase="(?''codeBase''.*?\\(?''tfm''net[^\\]*)\\[^\\]*?\.dll)"'
-$replacement2 = 'codeBase="${codeBase} (${tfm}).dll"'
+$replacement2 = 'codeBase="${codeBase} (${tfm})"'
 $netCoreReports = ls '.artifacts\nunit_*.trx' | % FullName
 $netCoreReports | ForEach-Object {
   (cat $_) -Replace $matchPattern1, $replacement1  -Replace $matchPattern2, $replacement2 | Out-File -Encoding UTF8 $_
