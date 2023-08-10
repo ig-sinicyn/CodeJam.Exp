@@ -12,7 +12,7 @@ environment:
   APPVEYOR_RDP_PASSWORD: test-me-123!
 build_script:
 - ps: dotnet build ./CodeJam.Light.sln
-tests: off
+test: off #disable auto-tests
 test_script:
   - ps: .\tests.ps1
 #on_finish:
