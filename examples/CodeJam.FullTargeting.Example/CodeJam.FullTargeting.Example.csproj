@@ -7,9 +7,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Include="..\..\build\Shared\GlobalUsings.cs" Link="Properties\GlobalUsings.cs" />
-		<Compile Include="..\..\build\Shared\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
-		<Compile Include="..\..\build\Shared\IndexRange\RuntimeHelpers.cs" Link="Properties\RuntimeHelpers.cs" />
+		<Compile Include="..\..\build\C#\GlobalUsings.cs" Link="Properties\GlobalUsings.cs" />
+		<Compile Include="..\..\build\C#\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
+		<Compile Include="..\..\build\C#\IndexRange\RuntimeHelpers.cs" Link="Properties\RuntimeHelpers.cs" />
 	</ItemGroup>
 
 </Project>

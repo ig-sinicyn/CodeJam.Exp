@@ -1,13 +1,8 @@
-﻿<Project>
+﻿<Project ToolsVersion="Current">
 	<Import Project=".\Targets\empty.targets" />
 
-	<PropertyGroup>
-		<!-- Used by included files -->
-		<Nullable>enable</Nullable>
-		<LangVersion>10.0</LangVersion>
-	</PropertyGroup>
-
 	<ItemGroup>
+		<!-- Used by included files -->
 		<PackageReference Include="Nullable" Version="1.3.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,17 +15,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />
 		<None Include="..\.gitattributes" Link=".gitattributes" />
 		<None Include="..\.gitignore" Link=".gitignore" />
 		<None Include="..\Directory.Build.props" Link="Props\Directory.Build.props" />
 		<None Include="..\Directory.Build.targets" Link="Targets\Directory.Build.targets" />
-		<None Include="Shared\GlobalTestUsings.cs" />
-		<None Include="Shared\GlobalUsings.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+		<None Include="C#\GlobalTestUsings.cs" />
+		<None Include="C#\GlobalUsings.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
