@@ -1,0 +1,3 @@
+﻿<Project ToolsVersion="Current">
+	<Import Project="..\build\Targets\empty.targets" />
+</Project>
