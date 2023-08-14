@@ -46,19 +46,38 @@
 
 		// Presets
 		InitAndNullable = IsExternalInit | Nullable,
-		ContractsTasksAndTuple = SystemDiagnosticsContracts | SystemThreadingTasks | SystemValueTuple,
+		ContractsTasksAndTuple = SystemDiagnosticsContracts
+			| SystemThreadingTasks
+			| SystemValueTuple,
+		TheraotAndReferences = SystemDiagnosticsContracts
+			| SystemThreadingTasks
+			| SystemValueTuple,
+		NetStandard1 = InitAndNullable
+			| ContractsTasksAndTuple
+			| SystemComponentModelAnnotations,
+		LegacyNetFramework = TheraotCore
+			| NetReferenceAssemblies
+			| SystemComponentModelAnnotationsReference,
+		LegacyNetFramework45 = InitAndNullable 
+			| NetReferenceAssemblies 
+			| SystemComponentModelAnnotationsReference
+			| SystemThreadingTasks
+			| SystemValueTuple,
+		NetFramework = InitAndNullable 
+			| SystemThreadingTasks
+			| SystemComponentModelAnnotationsReference,
 		PackageAndTest = Package | Test,
 		PackageShims = Nullable
-		               | IsExternalInit
-		               | SystemDiagnosticsContracts
-		               | SystemDiagnosticsContractsReference
-		               | SystemThreadingTasks
-		               | SystemValueTuple
-		               | SystemComponentModelAnnotations
-		               | SystemComponentModelAnnotationsReference
-		               | SystemMemory
-		               | BclAsyncInterfaces
-		               | NetReferenceAssemblies
-		               | TheraotCore
+			| IsExternalInit
+			| SystemDiagnosticsContracts
+			| SystemDiagnosticsContractsReference
+			| SystemThreadingTasks
+			| SystemValueTuple
+			| SystemComponentModelAnnotations
+			| SystemComponentModelAnnotationsReference
+			| SystemMemory
+			| BclAsyncInterfaces
+			| NetReferenceAssemblies
+			| TheraotCore
 	}
 #>

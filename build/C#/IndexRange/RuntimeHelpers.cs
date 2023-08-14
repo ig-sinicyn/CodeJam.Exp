@@ -1,6 +1,6 @@
 ﻿// BASEDON: https://gist.github.com/bgrainger/fb2c18659c2cdfce494c82a8c4803360
 // (taken from https://github.com/bgrainger/IndexRange readme)
-
+// ReSharper disable All
 #if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER
 [assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Runtime.CompilerServices.RuntimeHelpers))]
 #else

@@ -1,0 +1,78 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ include file = "..\T4\TargetingTemplate.ttinclude"#>
+<#@ output extension=".props" #><#
+	var targetingOptions = new TargetingOptions
+	{
+		DefaultFramework = "net6.0",
+		NetCoreShims =
+		{
+			["netcoreapp1.0"] = InitAndNullable | ContractsTasksAndTuple,
+			["netcoreapp1.1"] = InitAndNullable | ContractsTasksAndTuple,
+			["netcoreapp2.0"] = InitAndNullable | SystemThreadingTasks,
+			["netcoreapp2.1"] = InitAndNullable,
+			["netcoreapp2.2"] = InitAndNullable,
+			["netcoreapp3.0"] = IsExternalInit,
+			["netcoreapp3.1"] = IsExternalInit | PackageAndTest,
+			["net5.0"] = None | Test,
+			["net6.0"] = None | PackageAndTest | Minimal,
+			["net7.0"] = None | PackageAndTest
+		},
+		NetStandardShims =
+		{
+			["netstandard1.0"] = NetStandard1,
+			["netstandard1.1"] = NetStandard1,
+			["netstandard1.2"] = NetStandard1,
+			["netstandard1.3"] = NetStandard1,
+			["netstandard1.4"] = NetStandard1,
+			["netstandard1.5"] = NetStandard1,
+			["netstandard1.6"] = NetStandard1,
+			["netstandard2.0"] = InitAndNullable | SystemThreadingTasks | SystemComponentModelAnnotations | Package | Minimal,
+			["netstandard2.1"] = IsExternalInit | SystemComponentModelAnnotations | Package
+		},
+		NetFrameworkShims =
+		{
+			["net11"] = None,
+			["net20"] = LegacyNetFramework,
+			["net35"] = LegacyNetFramework | PackageAndTest,
+			["net40"] = LegacyNetFramework | PackageAndTest,
+			["net403"] = LegacyNetFramework,
+			["net45"] = LegacyNetFramework45 | PackageAndTest,
+			["net451"] = LegacyNetFramework45,
+			["net452"] = LegacyNetFramework45,
+			["net46"] = NetFramework | SystemValueTuple,
+			["net461"] = NetFramework | SystemValueTuple | PackageAndTest | Minimal,
+			["net462"] = NetFramework | SystemValueTuple,
+			["net47"] = NetFramework,
+			["net471"] = NetFramework,
+			["net472"] = NetFramework | PackageAndTest,
+			["net48"] = NetFramework | PackageAndTest
+		},
+		DefaultPackageVersions =
+		{
+			["FluentAssertions"] = "6.11.0",
+			["SystemMemory"] = "4.5.5"
+		},
+		PackageVersionOverrides =
+		{
+			["net461"] = new()
+			{
+				["SystemMemory"] = "4.5.1"
+			},
+			["net45"] = new()
+			{
+				["FluentAssertions"] = "5.10.3",
+				["SystemMemory"] = "4.5.1"
+			},
+			["net40"] = new()
+			{
+				["FluentAssertions"] = "4.19.4"
+			},
+			["net35"] = new()
+			{
+				["FluentAssertions"] = "2.2.0"
+			}
+		}
+	};
+
+	Emit(targetingOptions);
+#>

@@ -1,5 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\build\Targets\CodeJam.Tests.targets" />
+	<Import Project="..\..\build\Props\CodeJam.Tests.props" />
+	<Import Project="..\..\build\Props\CodeJam.Multitargeting.props" />
+	<Import Project="..\..\build\Targets\Multitargeting.Tests.targets" />
 
 	<PropertyGroup>
 		<AssemblyName>CodeJam.Light.Tests</AssemblyName>

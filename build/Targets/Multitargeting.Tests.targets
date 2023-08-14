@@ -1,7 +1,4 @@
 <Project>
-	<Import Project="..\..\build\Props\CodeJam.Targeting.props" />
-	<Import Project="..\..\build\Props\CodeJam.Tests.props" />
-
 	<PropertyGroup>
 		<Nullable>enable</Nullable>
 		<LangVersion>11.0</LangVersion>
@@ -9,6 +6,7 @@
 		<CheckEolTargetFramework>false</CheckEolTargetFramework>
 	</PropertyGroup>
 
+	<!-- #region Targeting test shims -->
 	<ItemGroup>
 		<PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
@@ -23,5 +21,6 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
+	<!-- #endregion -->
 
 </Project>

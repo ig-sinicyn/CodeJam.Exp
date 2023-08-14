@@ -1,8 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\build\Targets\Lightweight.Targeting.targets" />
+	<Import Project="..\..\build\Props\CodeJam.Publish.props" />
+	<Import Project="..\..\build\Props\CodeJam.Multitargeting.props" />
+	<Import Project="..\..\build\Targets\Multitargeting.targets" />
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45;net40;net35</TargetFrameworks>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 

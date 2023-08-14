@@ -1,4 +1,5 @@
-﻿/* MIT License
+﻿// ReSharper disable All
+/* MIT License
 
 Copyright (c) 2016 JetBrains http://www.jetbrains.com
 
@@ -21,8 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. */
 
 #nullable disable
-
-using System;
 
 // ReSharper disable UnusedType.Global
 

@@ -10,13 +10,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Compile Remove="GlobalTestUsings.cs" />
 		<Compile Remove="GlobalUsings.cs" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />
@@ -29,32 +30,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="Props\FullFeatured.Targeting.props">
-			<DependentUpon>FullFeatured.Targeting.tt</DependentUpon>
+		<None Update="Props\FullFeatured.Multitargeting.props">
+			<DependentUpon>FullFeatured.Multitargeting.tt</DependentUpon>
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 		</None>
-		<None Update="Props\FullFeatured.Targeting.tt">
-			<LastGenOutput>FullFeatured.Targeting.props</LastGenOutput>
+		<None Update="Props\FullFeatured.Multitargeting.tt">
+			<LastGenOutput>FullFeatured.Multitargeting.props</LastGenOutput>
 			<Generator>TextTemplatingFileGenerator</Generator>
 		</None>
-		<None Update="Props\CodeJam.Targeting.props">
+		<None Update="Props\CodeJam.Multitargeting.props">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
-			<DependentUpon>CodeJam.Targeting.tt</DependentUpon>
+			<DependentUpon>CodeJam.Multitargeting.tt</DependentUpon>
 		</None>
-		<None Update="Props\CodeJam.Targeting.tt">
+		<None Update="Props\CodeJam.Multitargeting.tt">
 			<Generator>TextTemplatingFileGenerator</Generator>
-			<LastGenOutput>CodeJam.Targeting.props</LastGenOutput>
-		</None>
-		<None Update="Props\Lightweight.Targeting.props">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Lightweight.Targeting.tt</DependentUpon>
-		</None>
-		<None Update="Props\Lightweight.Targeting.tt">
-			<Generator>TextTemplatingFileGenerator</Generator>
-			<LastGenOutput>Lightweight.Targeting.props</LastGenOutput>
+			<LastGenOutput>CodeJam.Multitargeting.props</LastGenOutput>
 		</None>
 		<None Update="T4\TargetingTemplate.Logic.ttinclude">
 			<DependentUpon>TargetingTemplate.ttinclude</DependentUpon>

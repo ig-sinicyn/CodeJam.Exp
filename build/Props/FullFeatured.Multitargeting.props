@@ -23,11 +23,14 @@ he code is regenerated.
 
 	<!-- Package reference switches -->
 	<PropertyGroup>
-		<UseNullable>false</UseNullable>
 		<UseIsExternalInit>false</UseIsExternalInit>
+		<UseNullable>false</UseNullable>
 		<UseSystemDiagnosticsContracts>false</UseSystemDiagnosticsContracts>
 		<UseSystemDiagnosticsContractsReference>false</UseSystemDiagnosticsContractsReference>
 		<UseSystemThreadingTasks>false</UseSystemThreadingTasks>
+		<UseSystemValueTuple>false</UseSystemValueTuple>
+		<UseSystemComponentModelAnnotations>false</UseSystemComponentModelAnnotations>
+		<UseSystemComponentModelAnnotationsReference>false</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>false</UseSystemMemory>
 		<UseBclAsyncInterfaces>false</UseBclAsyncInterfaces>
 		<UseNetReferenceAssemblies>false</UseNetReferenceAssemblies>

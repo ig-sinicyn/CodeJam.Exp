@@ -1,4 +1,6 @@
-﻿<#@ import namespace="System.Collections.Generic" #>
+﻿<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Linq" #>
 <#@ include file = "TargetingTemplate.Logic.ttinclude"#><#+
 	private void Emit(TargetingOptions options)

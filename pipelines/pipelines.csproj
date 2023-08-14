@@ -1,3 +1,6 @@
 ﻿<Project ToolsVersion="Current">
 	<Import Project="..\build\Targets\empty.targets" />
+	<ItemGroup>
+	  <None Include="..\appveyor.yml" Link="appveyor.yml" />
+	</ItemGroup>
 </Project>
