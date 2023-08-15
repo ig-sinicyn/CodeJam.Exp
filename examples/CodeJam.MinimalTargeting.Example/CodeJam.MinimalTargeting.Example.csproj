@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\..\build\Props\CodeJam.Publish.props" />
 	<Import Project="..\..\build\Props\CodeJam.Multitargeting.props" />
 	<Import Project="..\..\build\Targets\Multitargeting.targets" />
 
