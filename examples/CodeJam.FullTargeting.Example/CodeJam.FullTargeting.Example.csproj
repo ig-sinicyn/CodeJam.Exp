@@ -3,6 +3,8 @@
 	<Import Project="..\..\build\Targets\Multitargeting.targets" />
 
 	<PropertyGroup>
+		<RootNamespace>CodeJam.Targeting</RootNamespace>
+		<DefineConstants>$(DefineConstants);FULL_TARGETING</DefineConstants>
 		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45;net40;net35</TargetFrameworks>
 	</PropertyGroup>
 
@@ -10,6 +12,7 @@
 		<Compile Include="..\..\build\C#\GlobalUsings.cs" Link="Properties\GlobalUsings.cs" />
 		<Compile Include="..\..\build\C#\JetBrains.Annotations.cs" Link="Properties\JetBrains.Annotations.cs" />
 		<Compile Include="..\..\build\C#\IndexRange\RuntimeHelpers.cs" Link="Properties\RuntimeHelpers.cs" />
+		<Compile Include="..\CodeJam.MinimalTargeting.Example\TargetingFeatures.cs" Link="TargetingFeatures.cs" />
 	</ItemGroup>
 
 </Project>

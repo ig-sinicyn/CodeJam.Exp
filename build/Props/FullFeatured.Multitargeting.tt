@@ -22,33 +22,33 @@
 		},
 		NetStandardShims =
 		{
-			["netstandard1.0"] = TheraotCore | SystemDiagnosticsContracts,
-			["netstandard1.1"] = TheraotCore | SystemDiagnosticsContracts | SystemMemory,
-			["netstandard1.2"] = TheraotCore | SystemDiagnosticsContracts | SystemMemory,
-			["netstandard1.3"] = TheraotCore | SystemDiagnosticsContracts | SystemMemory,
-			["netstandard1.4"] = TheraotCore | SystemDiagnosticsContracts | SystemMemory,
-			["netstandard1.5"] = TheraotCore | SystemDiagnosticsContracts | SystemMemory,
-			["netstandard1.6"] = TheraotCore | BclAsyncInterfaces | SystemMemory,
-			["netstandard2.0"] = TheraotCore | BclAsyncInterfaces | SystemMemory | Package | Minimal,
-			["netstandard2.1"] = IsExternalInit | Package
+			["netstandard1.0"] = TheraotCore | SystemComponentModelAnnotations | SystemDiagnosticsContracts,
+			["netstandard1.1"] = TheraotCore | SystemComponentModelAnnotations | SystemDiagnosticsContracts | SystemMemory,
+			["netstandard1.2"] = TheraotCore | SystemComponentModelAnnotations | SystemDiagnosticsContracts | SystemMemory,
+			["netstandard1.3"] = TheraotCore | SystemComponentModelAnnotations | SystemDiagnosticsContracts | SystemMemory,
+			["netstandard1.4"] = TheraotCore | SystemComponentModelAnnotations | SystemDiagnosticsContracts | SystemMemory,
+			["netstandard1.5"] = TheraotCore | SystemComponentModelAnnotations | SystemDiagnosticsContracts | SystemMemory,
+			["netstandard1.6"] = TheraotCore | SystemComponentModelAnnotations | BclAsyncInterfaces | SystemMemory,
+			["netstandard2.0"] = TheraotCore | SystemComponentModelAnnotations | BclAsyncInterfaces | SystemMemory | Package | Minimal,
+			["netstandard2.1"] = IsExternalInit | SystemComponentModelAnnotations | Package
 		},
 		NetFrameworkShims =
 		{
-			["net11"] = TheraotCore | NetReferenceAssemblies,
-			["net20"] = TheraotCore | NetReferenceAssemblies,
-			["net35"] = TheraotCore | NetReferenceAssemblies | PackageAndTest,
-			["net40"] = TheraotCore | NetReferenceAssemblies | PackageAndTest,
-			["net403"] = TheraotCore | NetReferenceAssemblies,
-			["net45"] = TheraotCore | SystemMemory | PackageAndTest,
-			["net451"] = TheraotCore | SystemMemory,
-			["net452"] = TheraotCore | SystemMemory,
-			["net46"] = TheraotCore | SystemMemory,
-			["net461"] = TheraotCore | SystemMemory | PackageAndTest | Minimal,
-			["net462"] = TheraotCore | SystemMemory,
-			["net47"] = TheraotCore | SystemMemory | BclAsyncInterfaces,
-			["net471"] = TheraotCore | SystemMemory | BclAsyncInterfaces,
-			["net472"] = TheraotCore | SystemMemory | BclAsyncInterfaces | PackageAndTest,
-			["net48"] = TheraotCore | SystemMemory | BclAsyncInterfaces | PackageAndTest
+			["net11"] = TheraotCore | SystemComponentModelAnnotationsReference | NetReferenceAssemblies,
+			["net20"] = TheraotCore | SystemComponentModelAnnotationsReference | NetReferenceAssemblies,
+			["net35"] = TheraotCore | SystemComponentModelAnnotationsReference | NetReferenceAssemblies | PackageAndTest,
+			["net40"] = TheraotCore | SystemComponentModelAnnotationsReference | NetReferenceAssemblies | PackageAndTest,
+			["net403"] = TheraotCore | SystemComponentModelAnnotationsReference | NetReferenceAssemblies,
+			["net45"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory | PackageAndTest,
+			["net451"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory,
+			["net452"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory,
+			["net46"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory,
+			["net461"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory | PackageAndTest | Minimal,
+			["net462"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory,
+			["net47"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory | BclAsyncInterfaces,
+			["net471"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory | BclAsyncInterfaces,
+			["net472"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory | BclAsyncInterfaces | PackageAndTest,
+			["net48"] = TheraotCore | SystemComponentModelAnnotationsReference | SystemMemory | BclAsyncInterfaces | PackageAndTest
 		},
 		DefaultPackageVersions =
 		{

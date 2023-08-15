@@ -75,15 +75,18 @@ he code is regenerated.
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.1' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UseTheraotCore>true</UseTheraotCore>
@@ -91,114 +94,135 @@ he code is regenerated.
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.2' ">
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' ">
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
 		<UseSystemDiagnosticsContracts>true</UseSystemDiagnosticsContracts>
+		<UseSystemComponentModelAnnotations>true</UseSystemComponentModelAnnotations>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net48' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net472' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net471' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net47' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseBclAsyncInterfaces>true</UseBclAsyncInterfaces>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net462' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net46' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net452' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net451' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseSystemMemory>true</UseSystemMemory>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net403' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net40' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net35' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net20' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'net11' ">
+		<UseSystemComponentModelAnnotationsReference>true</UseSystemComponentModelAnnotationsReference>
 		<UseNetReferenceAssemblies>true</UseNetReferenceAssemblies>
 		<UseTheraotCore>true</UseTheraotCore>
 	</PropertyGroup>

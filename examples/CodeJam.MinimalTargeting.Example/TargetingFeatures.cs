@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CodeJam.MinimalTargeting.Example;
+namespace CodeJam.Targeting;
 
 [PublicAPI]
 public static class TargetingFeatures
@@ -113,11 +113,10 @@ public static class TargetingFeatures
 
 	#region System.HashCode()
 
-#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER || FULL_TARGETING
 	// System.HashCode is available as a part of
 	// .Net Standard 2.1 or .Net Core 2.1 or later versions
-	// We do want to keep code lightweight
-	// so we do not reference additional packages here
+	// We do not reference additional packages in lightweight targeting mode
 	public static int HashCodeSample() => HashCode.Combine(1, 2);
 #endif
 
@@ -199,11 +198,11 @@ public static class TargetingFeatures
 
 	#region Span
 
-#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
+#if (NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER) || (FULL_TARGETING && (TARGETS_NETCOREAPP || NETSTANDARD11_OR_GREATER || NET45_OR_GREATER))
 	// Spans are available as a part of
 	// .Net Standard 2.1 or .Net Core 2.1 or later versions
-	// We do want to keep code lightweight
-	// so we do not reference additional packages here
+	// We do not reference additional packages in lightweight targeting mode
+	// In full targeting mode we do add span support via System.Memory reference
 	public static int StackallocSpanSample()
 	{
 		Span<byte> data = stackalloc byte[] { 1, 2, 3, 4 };
@@ -236,11 +235,11 @@ public static class TargetingFeatures
 
 	#region IAsyncEnumerable
 
-#if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER
+#if NETCOREAPP30_OR_GREATER || NETSTANDARD21_OR_GREATER || (FULL_TARGETING && (TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET45_OR_GREATER))
 	// Async enumerables are available as a part of
 	// .Net Standard 2.1 or .Net Core 3.0 or later versions
-	// We do want to keep code lightweight
-	// so we do not reference additional packages here
+	// We do not reference additional packages in lightweight targeting mode
+	// In full targeting mode we do add span support via Microsoft.Bcl.AsyncInterfaces reference
 	public static async IAsyncEnumerable<int> EnumerateSampleAsync(
 		[EnumeratorCancellation] CancellationToken cancellation)
 	{

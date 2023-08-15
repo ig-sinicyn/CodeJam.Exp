@@ -8,12 +8,7 @@
 
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using System.Numerics.Hashing;
 using System.Runtime.CompilerServices;
-
-#if NETSTANDARD2_0
-using System.Numerics.Hashing;
-#endif
 
 // ReSharper disable once CheckNamespace
 namespace System
@@ -58,10 +53,10 @@ namespace System
 		/// <summary>Returns the hash code for this instance.</summary>
 		public override int GetHashCode()
 		{
-#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER || LESSTHAN_NET45
 			return HashCode.Combine(Start.GetHashCode(), End.GetHashCode());
 #else
-			return HashHelpers.Combine(Start.GetHashCode(), End.GetHashCode());
+			return System.Numerics.Hashing.HashHelpers.Combine(Start.GetHashCode(), End.GetHashCode());
 #endif
 		}
 
