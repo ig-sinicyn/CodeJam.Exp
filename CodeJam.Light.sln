@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{BD8EED
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pipelines", "pipelines\pipelines.csproj", "{F97DF198-616C-4963-908D-301304982A6A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeJam.MinimalTargeting.Tests", "tests\CodeJam.MinimalTargeting.Tests\CodeJam.MinimalTargeting.Tests.csproj", "{D962C8AE-F2A6-4AE8-A05D-86A7BC4607DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{F97DF198-616C-4963-908D-301304982A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F97DF198-616C-4963-908D-301304982A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F97DF198-616C-4963-908D-301304982A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D962C8AE-F2A6-4AE8-A05D-86A7BC4607DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D962C8AE-F2A6-4AE8-A05D-86A7BC4607DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D962C8AE-F2A6-4AE8-A05D-86A7BC4607DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D962C8AE-F2A6-4AE8-A05D-86A7BC4607DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

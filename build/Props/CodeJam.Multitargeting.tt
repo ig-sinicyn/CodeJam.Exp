@@ -13,7 +13,7 @@
 			["netcoreapp2.2"] = InitAndNullable,
 			["netcoreapp3.0"] = IsExternalInit,
 			["netcoreapp3.1"] = IsExternalInit | PackageAndTest,
-			["net5.0"] = None | Test,
+			["net5.0"] = None,
 			["net6.0"] = None | PackageAndTest | Minimal,
 			["net7.0"] = None | PackageAndTest
 		},
