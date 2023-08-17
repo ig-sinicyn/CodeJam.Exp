@@ -1,18 +1,16 @@
-using NUnit.Framework.Internal;
-
 using System.Reflection;
 using System.Runtime.Versioning;
-using System.Threading.Tasks;
 
 namespace CodeJam.Targeting.Tests;
 
 [TestFixture]
-public class TargetingTests
+public class EnvironmentTests
 {
-	/// <summary>
-	/// The expected is the same or lower than the current target depending on our build.
-	/// </summary>
-	public const string ExpectedTargetFramework =
+	private const string _expectedCiAssemblyVersionRegex = @"^1\.0\.\d+\.0$";
+
+	private const string _expectedLocalAssemblyVersionRegex = @"^1\.0\.0\.0$";
+
+	private const string _expectedTargetFramework =
 #if NET20
 		".NETFramework,Version=v2.0";
 #elif NET30
@@ -61,7 +59,7 @@ public class TargetingTests
 		"UNKNOWN";
 #endif
 
-	public const string ExpectedRuntimeRegex =
+	private const string _expectedRuntimeRegex =
 #if NET20
 		"(^2\\.0)|(^4\\.8)";
 #elif NET30
@@ -110,6 +108,22 @@ public class TargetingTests
 		"UNKNOWN";
 #endif
 
+	private static readonly bool _isCIEnvironment = Environment.GetEnvironmentVariable("APPVEYOR") != null;
+
+	[Test]
+	public void TargetAssemblyVersion_Matches()
+	{
+		var targetVersion = typeof(TargetingFeatures)
+			.Assembly
+			.GetName().Version.ToString();
+
+		var versionRegex = _isCIEnvironment
+			? _expectedCiAssemblyVersionRegex
+			: _expectedLocalAssemblyVersionRegex;
+
+		targetVersion.Should().MatchRegex(versionRegex);
+	}
+
 	[Test]
 	public void TargetAssemblyFramework_Matches()
 	{
@@ -118,7 +132,21 @@ public class TargetingTests
 			.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName
 			?? "N/A";
 
-		targetFramework.Should().Be(ExpectedTargetFramework);
+		targetFramework.Should().Be(_expectedTargetFramework);
+	}
+
+	[Test]
+	public void TestAssemblyVersion_Matches()
+	{
+		var targetVersion = GetType()
+			.Assembly
+			.GetName().Version.ToString();
+
+		var versionRegex = _isCIEnvironment
+			? _expectedCiAssemblyVersionRegex
+			: _expectedLocalAssemblyVersionRegex;
+
+		targetVersion.Should().MatchRegex(versionRegex);
 	}
 
 	[Test]
@@ -129,7 +157,7 @@ public class TargetingTests
 			.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName
 			?? "N/A";
 
-		targetFramework.Should().Be(ExpectedTargetFramework);
+		targetFramework.Should().Be(_expectedTargetFramework);
 	}
 
 	[Test]
@@ -140,6 +168,6 @@ public class TargetingTests
 			.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion
 			?? "N/A";
 
-		targetRuntime.Should().MatchRegex(ExpectedRuntimeRegex);
+		targetRuntime.Should().MatchRegex(_expectedRuntimeRegex);
 	}
 }

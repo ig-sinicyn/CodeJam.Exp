@@ -11,7 +11,7 @@ nuget:
 environment:
   APPVEYOR_RDP_PASSWORD: test-me-123!
 build_script:
-- ps: dotnet build .\CodeJam.Light.sln
+- ps: dotnet build .\CodeJam.Light.sln -p:Version=$env:APPVEYOR_BUILD_VERSION
 test: off #disable auto-tests
 test_script:
   - ps: .\pipelines\appveyor.tests.ps1
