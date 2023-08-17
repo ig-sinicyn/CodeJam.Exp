@@ -33,36 +33,36 @@ public static class TargetingFeatures
 	// ValueTasks are part of .Net Standard 2.1 or .Net Core 1.0 or later versions
 	// We do reference System.Threading.Tasks.Extensions for other frameworks
 
-	public static Task TaskSampleAsync(CancellationToken cancellation) => TaskEx.Delay(1, cancellation);
+	public static Task TaskSampleAsync(CancellationToken cancellation = default) => TaskEx.Delay(1, cancellation);
 
-	public static Task<int> TaskOfTSampleAsync(CancellationToken cancellation) => TaskEx.FromResult(42);
+	public static Task<int> TaskOfTSampleAsync(CancellationToken cancellation = default) => TaskEx.Delay(1, cancellation).ContinueWith(_ => 42, cancellation);
 
-	public static ValueTask ValueTaskSampleAsync(CancellationToken cancellation) => new();
-
-	public static ValueTask<int> ValueTaskOfTSampleAsync(CancellationToken cancellation) => new(42);
-
-	public static async Task AwaitTaskSampleAsync(CancellationToken cancellation)
+	public static ValueTask ValueTaskSampleAsync(CancellationToken cancellation = default)
 	{
-		await TaskEx.Delay(1, cancellation);
-		await TaskSampleAsync(cancellation);
+		cancellation.ThrowIfCancellationRequested();
+		return new();
 	}
 
-	public static async Task<int> AwaitTaskOfTSampleAsync(CancellationToken cancellation)
+	public static ValueTask<int> ValueTaskOfTSampleAsync(CancellationToken cancellation = default)
 	{
-		await TaskEx.Delay(1, cancellation);
-		return await TaskOfTSampleAsync(cancellation);
+		cancellation.ThrowIfCancellationRequested();
+		return new(42);
 	}
 
-	public static async ValueTask AwaitValueTaskSampleAsync(CancellationToken cancellation)
+	public static async Task AwaitTaskSampleAsync(CancellationToken cancellation = default) => await TaskEx.Delay(1, cancellation);
+
+	public static async Task<int> AwaitTaskOfTSampleAsync(CancellationToken cancellation = default)
 	{
 		await TaskEx.Delay(1, cancellation);
-		await ValueTaskSampleAsync(cancellation);
+		return 42;
 	}
 
-	public static async ValueTask<int> AwaitValueTaskOfTSampleAsync(CancellationToken cancellation)
+	public static async ValueTask AwaitValueTaskSampleAsync(CancellationToken cancellation = default) => await TaskEx.Delay(1, cancellation);
+
+	public static async ValueTask<int> AwaitValueTaskOfTSampleAsync(CancellationToken cancellation = default)
 	{
 		await TaskEx.Delay(1, cancellation);
-		return await ValueTaskOfTSampleAsync(cancellation);
+		return 42;
 	}
 
 	#endregion
@@ -110,7 +110,6 @@ public static class TargetingFeatures
 	}
 
 	#endregion
-
 
 	#region System.HashCode()
 

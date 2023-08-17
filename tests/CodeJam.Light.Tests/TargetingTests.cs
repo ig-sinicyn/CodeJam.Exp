@@ -6,8 +6,5 @@ namespace CodeJam.Tests;
 public class DemoTests
 {
 	[Test]
-	public void PlainTest()
-	{
-		Console.WriteLine("Hello!");
-	}
+	public void PlainTest() => Console.WriteLine("Hello!");
 }

@@ -115,7 +115,7 @@ public class EnvironmentTests
 	{
 		var targetVersion = typeof(TargetingFeatures)
 			.Assembly
-			?.GetName().Version.ToString();
+			.GetName().Version?.ToString();
 
 		var versionRegex = _runsInPipeline
 			? _expectedCiAssemblyVersionRegex
@@ -131,7 +131,7 @@ public class EnvironmentTests
 	{
 		var targetFramework = typeof(TargetingFeatures)
 			.Assembly
-			?.GetCustomAttribute<TargetFrameworkAttribute>().FrameworkName
+			.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName
 			?? "N/A";
 
 		targetFramework.Should().Be(_expectedTargetFramework);
@@ -142,7 +142,7 @@ public class EnvironmentTests
 	{
 		var targetVersion = GetType()
 			.Assembly
-			.GetName().Version.ToString();
+			.GetName().Version?.ToString();
 
 		var versionRegex = _runsInPipeline
 			? _expectedCiAssemblyVersionRegex
@@ -156,7 +156,7 @@ public class EnvironmentTests
 	{
 		var targetFramework = GetType()
 			.Assembly
-			?.GetCustomAttribute<TargetFrameworkAttribute>().FrameworkName
+			.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName
 			?? "N/A";
 
 		targetFramework.Should().Be(_expectedTargetFramework);
@@ -167,7 +167,7 @@ public class EnvironmentTests
 	{
 		var targetRuntime = typeof(int)
 			.Assembly
-			?.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion
+			.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion
 			?? "N/A";
 
 		targetRuntime.Should().MatchRegex(_expectedRuntimeRegex);
