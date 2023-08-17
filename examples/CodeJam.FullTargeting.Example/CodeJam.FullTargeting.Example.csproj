@@ -5,7 +5,8 @@
 	<PropertyGroup>
 		<RootNamespace>CodeJam.Targeting</RootNamespace>
 		<DefineConstants>$(DefineConstants);FULL_TARGETING</DefineConstants>
-		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45;net40;net35</TargetFrameworks>
+
 	</PropertyGroup>
 
 	<ItemGroup>
