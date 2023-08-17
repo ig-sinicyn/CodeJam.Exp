@@ -12,7 +12,7 @@ public static class TargetingFeatures
 {
 	#region Diagnostics.Contracts
 
-	[System.Diagnostics.Contracts.Pure]
+	[ContractsPure]
 	public static int ContractsSample() => 42;
 
 	#endregion
@@ -23,7 +23,7 @@ public static class TargetingFeatures
 	{
 		[Display(Name = "Sample Value")]
 		[Required]
-		SampleValue = 0,
+		SampleValue = 0
 	}
 
 	#endregion
@@ -111,6 +111,7 @@ public static class TargetingFeatures
 
 	#endregion
 
+
 	#region System.HashCode()
 
 #if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER || FULL_TARGETING
@@ -124,7 +125,29 @@ public static class TargetingFeatures
 
 	#region System.ValueTuple
 
-	public static (int a, int b) TupleSample() => (1, 2);
+	public static (int a, int b) TupleSample()
+	{
+		var src = (1, 2);
+
+		var (a, b) = src;
+
+		return (a, b);
+	}
+
+	#endregion
+
+	#region Deconstruct
+
+	// System.HashCode is available as a part of
+	// .Net Standard 2.1 or .Net Core 2.1 or later versions
+	// We do not reference additional packages in lightweight targeting mode
+	public static int DeconstructSample()
+	{
+		var src = new KeyValuePair<int, int>(1, 2);
+		var (a, b) = src;
+
+		return a + b;
+	}
 
 	#endregion
 

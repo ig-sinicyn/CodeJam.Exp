@@ -17,7 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Include="..\..\build\C#\GlobalTestUsings.cs" Link="Properties\GlobalTestUsings.cs" />
+		<Compile Include="..\..\build\C# (Tests)\GlobalTestUsings.cs" Link="Properties\GlobalTestUsings.cs" />
 	</ItemGroup>
 
 </Project>

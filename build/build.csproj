@@ -34,7 +34,7 @@
 		<None Include="..\.gitignore" Link=".gitignore" />
 		<None Include="..\Directory.Build.props" Link="Props\Directory.Build.props" />
 		<None Include="..\Directory.Build.targets" Link="Targets\Directory.Build.targets" />
-		<None Include="C#\GlobalTestUsings.cs" />
+		<None Include="C# %28Tests%29\GlobalTestUsings.cs" />
 		<None Include="C#\GlobalUsings.cs" />
 	</ItemGroup>
 

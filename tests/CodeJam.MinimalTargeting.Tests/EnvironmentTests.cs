@@ -108,41 +108,43 @@ public class EnvironmentTests
 		"UNKNOWN";
 #endif
 
-	private static readonly bool _isCIEnvironment = Environment.GetEnvironmentVariable("APPVEYOR") != null;
+	private static readonly bool _runsInPipeline = Environment.GetEnvironmentVariable("CI") != null;
 
 	[Test]
-	public void TargetAssemblyVersion_Matches()
+	public void TargetAssemblyVersion_MatchesExpected()
 	{
 		var targetVersion = typeof(TargetingFeatures)
 			.Assembly
-			.GetName().Version.ToString();
+			?.GetName().Version.ToString();
 
-		var versionRegex = _isCIEnvironment
+		var versionRegex = _runsInPipeline
 			? _expectedCiAssemblyVersionRegex
 			: _expectedLocalAssemblyVersionRegex;
 
 		targetVersion.Should().MatchRegex(versionRegex);
+
+		Console.WriteLine(targetVersion);
 	}
 
 	[Test]
-	public void TargetAssemblyFramework_Matches()
+	public void TargetAssemblyFramework_MatchesExpected()
 	{
 		var targetFramework = typeof(TargetingFeatures)
 			.Assembly
-			.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName
+			?.GetCustomAttribute<TargetFrameworkAttribute>().FrameworkName
 			?? "N/A";
 
 		targetFramework.Should().Be(_expectedTargetFramework);
 	}
 
 	[Test]
-	public void TestAssemblyVersion_Matches()
+	public void TestAssemblyVersion_MatchesExpected()
 	{
 		var targetVersion = GetType()
 			.Assembly
 			.GetName().Version.ToString();
 
-		var versionRegex = _isCIEnvironment
+		var versionRegex = _runsInPipeline
 			? _expectedCiAssemblyVersionRegex
 			: _expectedLocalAssemblyVersionRegex;
 
@@ -150,22 +152,22 @@ public class EnvironmentTests
 	}
 
 	[Test]
-	public void TestAssemblyFramework_Matches()
+	public void TestAssemblyFramework_MatchesExpected()
 	{
 		var targetFramework = GetType()
 			.Assembly
-			.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName
+			?.GetCustomAttribute<TargetFrameworkAttribute>().FrameworkName
 			?? "N/A";
 
 		targetFramework.Should().Be(_expectedTargetFramework);
 	}
 
 	[Test]
-	public void RuntimeVersion_Matches()
+	public void RuntimeVersion_MatchesExpected()
 	{
 		var targetRuntime = typeof(int)
 			.Assembly
-			.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion
+			?.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion
 			?? "N/A";
 
 		targetRuntime.Should().MatchRegex(_expectedRuntimeRegex);
