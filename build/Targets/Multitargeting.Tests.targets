@@ -21,6 +21,16 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Append missing TargetFrameworkAttribute -->
+		<AssemblyAttribute Condition=" '$(TargetFramework)' == 'net20'" Include="System.Runtime.Versioning.TargetFrameworkAttribute">
+			<_Parameter1>.NETFramework,Version=v2.0</_Parameter1>
+		</AssemblyAttribute>
+		<AssemblyAttribute Condition=" '$(TargetFramework)' == 'net35'" Include="System.Runtime.Versioning.TargetFrameworkAttribute">
+			<_Parameter1>.NETFramework,Version=v3.5</_Parameter1>
+		</AssemblyAttribute>
+	</ItemGroup>
 	<!-- #endregion -->
 
 </Project>

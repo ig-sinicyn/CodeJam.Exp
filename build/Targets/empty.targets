@@ -1,14 +1,4 @@
 <Project>
-	<!-- Used to enable autocompletion for included files -->
-	<PropertyGroup>
-		<TargetFramework>netstandard2.0</TargetFramework>
-		<Nullable>enable</Nullable>
-		<LangVersion>11.0</LangVersion>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<IsPublishable>false</IsPublishable>
-	</PropertyGroup>
 
 	<!-- THANKSTO https://stackoverflow.com/a/47619786 -->
 	<!-- Import SDK explicitly -->
@@ -20,4 +10,5 @@
 	<Target Name="Rebuild" />
 	<Target Name="Build" />
 	<Target Name="Pack" />
+
 </Project>

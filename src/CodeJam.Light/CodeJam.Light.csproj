@@ -7,7 +7,6 @@
 		<AssemblyName>CodeJam.Light</AssemblyName>
 		<RootNamespace>CodeJam</RootNamespace>
 		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;netstandard2.1;netstandard2.0;net48;net472;net461;net45;net40;net35</TargetFrameworks>
-
 		<PackageId>CodeJam.Light</PackageId>
 		<Title>CodeJam library (light version)</Title>
 		<Authors>Andrew Koryavchenko, Igor Sinicyn, Igor Tkachev, rameel, NN</Authors>

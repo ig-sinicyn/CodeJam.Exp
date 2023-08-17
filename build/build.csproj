@@ -1,8 +1,18 @@
-﻿<Project ToolsVersion="Current">
+﻿<Project>
+	<!-- Required by VS project loader -->
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+
+		<!-- Required for proper autocompletion in linked files -->
+		<Nullable>enable</Nullable>
+		<LangVersion>11.0</LangVersion>
+		<IsPublishable>false</IsPublishable>
+	</PropertyGroup>
+
 	<Import Project=".\Targets\empty.targets" />
 
+	<!-- Required for proper autocompletion in linked files -->
 	<ItemGroup>
-		<!-- Used by included files -->
 		<PackageReference Include="Nullable" Version="1.3.1">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,7 +27,6 @@
 		<Compile Remove="GlobalTestUsings.cs" />
 		<Compile Remove="GlobalUsings.cs" />
 	</ItemGroup>
-
 
 	<ItemGroup>
 		<None Include="..\.editorconfig" Link=".editorconfig" />

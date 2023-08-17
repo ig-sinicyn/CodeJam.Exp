@@ -1,5 +1,11 @@
 ﻿<Project>
+	<!-- Required by VS project loader -->
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+	</PropertyGroup>
+
 	<Import Project="..\build\Targets\empty.targets" />
+
 	<ItemGroup>
 		<None Include="..\ReadMe.md" Link="ReadMe.md" />
 	</ItemGroup>
