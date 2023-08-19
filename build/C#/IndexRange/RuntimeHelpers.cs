@@ -8,7 +8,6 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
-// ReSharper disable once CheckNamespace
 namespace System.Runtime.CompilerServices;
 
 internal static class RuntimeHelpers
@@ -25,7 +24,6 @@ internal static class RuntimeHelpers
 
 		(var offset, var length) = range.GetOffsetAndLength(array.Length);
 
-		// ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
 		if (default(T) != null ||
 			typeof(T[]) ==
 			array.GetType())

@@ -10,6 +10,15 @@ namespace CodeJam.Targeting.Tests;
 [TestFixture]
 public class TargetingTests
 {
+	private static CancellationToken GetCancelledToken()
+	{
+		var cts = new CancellationTokenSource();
+		cts.Cancel();
+		return cts.Token;
+	}
+
+	private static readonly CancellationToken _cancelledToken = GetCancelledToken();
+
 	#region Diagnostics.Contracts
 
 	[Test]
@@ -55,44 +64,98 @@ public class TargetingTests
 
 	[Test]
 #if LESSTHAN_NET45
-	public void TaskAwait_OkShim() => TaskAwait_Ok().Wait();
+	public void Task_OkShim() => Task_Ok().Wait();
 #endif
-	public async Task TaskAwait_Ok() => await TargetingFeatures.TaskSampleAsync();
+	public async Task Task_Ok() => await TargetingFeatures.TaskSampleAsync();
 
-	// ValueTasks are part of .Net Standard 2.1 or .Net Core 1.0 or later versions
-	// We do reference System.Threading.Tasks.Extensions for other frameworks
-
-	public static Task TaskSampleAsync(CancellationToken cancellation) => TaskEx.Delay(1, cancellation);
-
-	public static Task<int> TaskOfTSampleAsync(CancellationToken cancellation) => TaskEx.FromResult(42);
-
-	public static ValueTask ValueTaskSampleAsync(CancellationToken cancellation) => new();
-
-	public static ValueTask<int> ValueTaskOfTSampleAsync(CancellationToken cancellation) => new(42);
-
-	public static async Task AwaitTaskSampleAsync(CancellationToken cancellation)
+	[Test]
+#if LESSTHAN_NET45
+	public void TaskOfT_OkShim() => TaskOfT_Ok().Wait();
+#endif
+	public async Task TaskOfT_Ok()
 	{
-		await TaskEx.Delay(1, cancellation);
-		await TaskSampleAsync(cancellation);
+		var result = await TargetingFeatures.TaskOfTSampleAsync();
+		result.Should().Be(42);
 	}
 
-	public static async Task<int> AwaitTaskOfTSampleAsync(CancellationToken cancellation)
+	[Test]
+#if LESSTHAN_NET45
+	public void ValueTask_OkShim() => ValueTask_Ok().Wait();
+#endif
+	public async Task ValueTask_Ok() => await TargetingFeatures.ValueTaskSampleAsync();
+
+	[Test]
+#if LESSTHAN_NET45
+	public void ValueTaskOfT_OkShim() => ValueTaskOfT_Ok().Wait();
+#endif
+	public async Task ValueTaskOfT_Ok()
 	{
-		await TaskEx.Delay(1, cancellation);
-		return await TaskOfTSampleAsync(cancellation);
+		var result = await TargetingFeatures.ValueTaskOfTSampleAsync();
+		result.Should().Be(42);
 	}
 
-	public static async ValueTask AwaitValueTaskSampleAsync(CancellationToken cancellation)
+	[Test]
+#if LESSTHAN_NET45
+	public void AwaitTask_OkShim() => AwaitTask_Ok().Wait();
+#endif
+	public async Task AwaitTask_Ok() => await TargetingFeatures.AwaitTaskSampleAsync();
+
+	[Test]
+#if LESSTHAN_NET45
+	public void AwaitTaskOfT_OkShim() => AwaitTaskOfT_Ok().Wait();
+#endif
+	public async Task AwaitTaskOfT_Ok()
 	{
-		await TaskEx.Delay(1, cancellation);
-		await ValueTaskSampleAsync(cancellation);
+		var result = await TargetingFeatures.AwaitTaskOfTSampleAsync();
+		result.Should().Be(42);
 	}
 
-	public static async ValueTask<int> AwaitValueTaskOfTSampleAsync(CancellationToken cancellation)
+	[Test]
+#if LESSTHAN_NET45
+	public void AwaitValueTask_OkShim() => AwaitValueTask_Ok().Wait();
+#endif
+	public async Task AwaitValueTask_Ok() => await TargetingFeatures.AwaitValueTaskSampleAsync();
+
+	[Test]
+#if LESSTHAN_NET45
+	public void AwaitValueTaskOfT_OkShim() => AwaitValueTaskOfT_Ok().Wait();
+#endif
+	public async Task AwaitValueTaskOfT_Ok()
 	{
-		await TaskEx.Delay(1, cancellation);
-		return await ValueTaskOfTSampleAsync(cancellation);
+		var result = await TargetingFeatures.AwaitValueTaskOfTSampleAsync();
+		result.Should().Be(42);
 	}
+
+	#endregion
+
+	#region Tasks and async (cancellation)
+
+	[Test]
+	public void AwaitTask_Canceled_Throws() =>
+		AssertEx.ThrowsAsync<TaskCanceledException>(() =>
+			TargetingFeatures.AwaitTaskSampleAsync(_cancelledToken));
+	[Test]
+	public void AwaitTaskOfT_Canceled_Throws() =>
+		AssertEx.ThrowsAsync<TaskCanceledException>(() =>
+			TargetingFeatures.AwaitTaskOfTSampleAsync(_cancelledToken));
+
+	[Test]
+	public void AwaitValueTask_Canceled_Throws() =>
+#if LESSTHAN_NET45
+		AssertEx.ThrowsAsync<TaskCanceledException>(async () =>
+#else
+		AssertEx.ThrowsAsync<OperationCanceledException>(async () =>
+#endif
+			await TargetingFeatures.AwaitValueTaskSampleAsync(_cancelledToken));
+
+	[Test]
+	public void AwaitValueTaskOfT_Canceled_Throws() =>
+#if LESSTHAN_NET45
+		AssertEx.ThrowsAsync<TaskCanceledException>(async () =>
+#else
+		AssertEx.ThrowsAsync<OperationCanceledException>(async () =>
+#endif
+		await TargetingFeatures.AwaitValueTaskOfTSampleAsync(_cancelledToken));
 
 	#endregion
 }

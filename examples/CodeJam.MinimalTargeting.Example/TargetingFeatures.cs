@@ -49,21 +49,13 @@ public static class TargetingFeatures
 		return new(42);
 	}
 
-	public static async Task AwaitTaskSampleAsync(CancellationToken cancellation = default) => await TaskEx.Delay(1, cancellation);
+	public static async Task AwaitTaskSampleAsync(CancellationToken cancellation = default) => await TaskSampleAsync(cancellation);
 
-	public static async Task<int> AwaitTaskOfTSampleAsync(CancellationToken cancellation = default)
-	{
-		await TaskEx.Delay(1, cancellation);
-		return 42;
-	}
+	public static async Task<int> AwaitTaskOfTSampleAsync(CancellationToken cancellation = default) => await TaskOfTSampleAsync(cancellation);
 
-	public static async ValueTask AwaitValueTaskSampleAsync(CancellationToken cancellation = default) => await TaskEx.Delay(1, cancellation);
+	public static async ValueTask AwaitValueTaskSampleAsync(CancellationToken cancellation = default) => await ValueTaskSampleAsync(cancellation);
 
-	public static async ValueTask<int> AwaitValueTaskOfTSampleAsync(CancellationToken cancellation = default)
-	{
-		await TaskEx.Delay(1, cancellation);
-		return 42;
-	}
+	public static async ValueTask<int> AwaitValueTaskOfTSampleAsync(CancellationToken cancellation = default) => await ValueTaskOfTSampleAsync(cancellation);
 
 	#endregion
 

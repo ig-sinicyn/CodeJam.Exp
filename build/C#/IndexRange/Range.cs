@@ -10,7 +10,6 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 
-// ReSharper disable once CheckNamespace
 namespace System
 {
 	/// <summary>Represent a range has start and end indexes.</summary>
