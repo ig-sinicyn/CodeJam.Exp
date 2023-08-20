@@ -1,6 +1,6 @@
 ﻿// BASEDON: https://github.com/nunit/nunit/blob/8bea39aeee80a0fbc68afde05f12aa298e2f0873/src/NUnitFramework/framework/Assert.Exceptions.Async.cs#L11
 // ReSharper disable All
-#if NET403_OR_GREATER
+#if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET40_OR_GREATER
 #else
 // Copyright (c) Charlie Poole, Rob Prouse and Contributors. MIT License - see LICENSE.txt
 
