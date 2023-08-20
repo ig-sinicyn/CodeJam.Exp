@@ -7,7 +7,6 @@
 		<AssemblyName>CodeJam.Light.Tests</AssemblyName>
 		<RootNamespace>CodeJam.Tests</RootNamespace>
 		<TargetFrameworks>net6.0;net7.0;netcoreapp3.1;net48;net472;net461;net45;net40;net35</TargetFrameworks>
-
 		<!-- Filter target frameworks if requested -->
 		<TargetFrameworks Condition=" '$(NetCoreTests)' == 'true' ">net6.0;net7.0;net5.0;netcoreapp3.1</TargetFrameworks>
 		<TargetFrameworks Condition=" '$(NetFrameworkTests)' == 'true' ">net48;net472;net461;net45;net40;net35</TargetFrameworks>

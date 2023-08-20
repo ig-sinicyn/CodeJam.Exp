@@ -4,6 +4,9 @@
 		<LangVersion>11.0</LangVersion>
 		<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
 		<CheckEolTargetFramework>false</CheckEolTargetFramework>
+
+		<!-- Suppress warning CS1685: The predefined type 'RuntimeHelpers' is defined in multiple assemblies -->
+		<NoWarn>CS1685</NoWarn>
 	</PropertyGroup>
 
 	<!-- #region Targeting test shims -->
