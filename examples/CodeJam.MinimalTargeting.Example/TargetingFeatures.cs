@@ -64,10 +64,10 @@ public static class TargetingFeatures
 #if NETCOREAPP20_OR_GREATER || NETSTANDARD20_OR_GREATER || NET40_OR_GREATER
 	// No class records here, sorry.
 	// https://github.com/dotnet/roslyn/issues/55812
-	public record RecordSample(int Value = 42);
+	public record RecordSample(int Value, int Value2 = 42);
 #endif
 
-	public readonly record struct StructRecordSample(int Value = 42);
+	public readonly record struct StructRecordSample(int Value, int Value2 = 42);
 
 	#endregion
 
@@ -83,7 +83,7 @@ public static class TargetingFeatures
 
 	[Pure, ContractsPure]
 	[CollectionAccess(CollectionAccessType.Read)]
-	public static TValue? DictionaryExtensionSample<TKey, TValue>(
+	public static TValue? GetValueSample<TKey, TValue>(
 		this IReadOnlyDictionary<TKey, TValue> dictionary,
 		TKey key,
 		TValue? defaultValue)
@@ -116,7 +116,7 @@ public static class TargetingFeatures
 
 	#region System.ValueTuple
 
-	public static (int a, int b) TupleSample()
+	public static (int a, int b) ValueTupleSample()
 	{
 		var src = (1, 2);
 
@@ -129,9 +129,6 @@ public static class TargetingFeatures
 
 	#region Deconstruct
 
-	// System.HashCode is available as a part of
-	// .Net Standard 2.1 or .Net Core 2.1 or later versions
-	// We do not reference additional packages in lightweight targeting mode
 	public static int DeconstructSample()
 	{
 		var src = new KeyValuePair<int, int>(1, 2);
@@ -223,11 +220,11 @@ public static class TargetingFeatures
 
 		var subSpan = data[1..^1];
 
-		var val = 0xEFu;
+		ushort val = 0xABEF;
 
 		MemoryMarshal.Write(subSpan, ref val);
 
-		return data[1];
+		return MemoryMarshal.Read<int>(data);
 	}
 
 	public static int ArraySpanSample()
@@ -255,14 +252,14 @@ public static class TargetingFeatures
 	// We do not reference additional packages in lightweight targeting mode
 	// In full targeting mode we do add span support via Microsoft.Bcl.AsyncInterfaces reference
 	public static async IAsyncEnumerable<int> EnumerateSampleAsync(
-		[EnumeratorCancellation] CancellationToken cancellation)
+		[EnumeratorCancellation] CancellationToken cancellation = default)
 	{
-		cancellation.ThrowIfCancellationRequested();
 		await TaskEx.Yield();
+		cancellation.ThrowIfCancellationRequested();
 		yield return 42;
 	}
 
-	public static async ValueTask<int> UseAsyncEnumeratorAsync(CancellationToken cancellation)
+	public static async ValueTask<int> UseAsyncEnumeratorAsync(CancellationToken cancellation = default)
 	{
 		await foreach (var v in EnumerateSampleAsync(cancellation))
 		{
