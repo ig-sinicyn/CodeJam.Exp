@@ -7,6 +7,8 @@
 		<Nullable>enable</Nullable>
 		<LangVersion>11.0</LangVersion>
 		<IsPublishable>false</IsPublishable>
+		<!-- Suppress warning CS1685: The predefined type 'RuntimeHelpers' is defined in multiple assemblies -->
+		<NoWarn>CS1685</NoWarn>
 	</PropertyGroup>
 
 	<Import Project=".\Targets\empty.targets" />
