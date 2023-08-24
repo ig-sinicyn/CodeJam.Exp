@@ -19,5 +19,4 @@
 	<ItemGroup>
 		<Compile Include="..\..\build\C# (Tests)\**" Link="Properties\%(RecursiveDir)\%(Filename)%(Extension)" />
 	</ItemGroup>
-
 </Project>

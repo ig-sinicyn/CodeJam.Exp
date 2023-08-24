@@ -8,7 +8,6 @@ namespace CodeJam
 	{
 		/// <summary>Target platform the assembly was built for.</summary>
 		// ReSharper disable once ConstantConditionalAccessQualifier
-		[SuppressMessage("ReSharper", "ConstantConditionalAccessQualifier")]
 		public static readonly string? TargetPlatform =
 			typeof(PlatformHelper).Assembly.GetCustomAttribute<TargetFrameworkAttribute>()?.FrameworkName;
 	}

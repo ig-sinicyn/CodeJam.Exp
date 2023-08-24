@@ -209,7 +209,7 @@ public static class TargetingFeatures
 
 	#region Span
 
-#if (NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER) || (FULL_TARGETING && (TARGETS_NETCOREAPP || NETSTANDARD11_OR_GREATER || NET45_OR_GREATER))
+#if NETCOREAPP21_OR_GREATER || NETSTANDARD21_OR_GREATER || (FULL_TARGETING && (TARGETS_NETCOREAPP || NETSTANDARD11_OR_GREATER || NET45_OR_GREATER))
 	// Spans are available as a part of
 	// .Net Standard 2.1 or .Net Core 2.1 or later versions
 	// We do not reference additional packages in lightweight targeting mode

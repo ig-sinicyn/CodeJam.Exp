@@ -6,7 +6,7 @@ namespace CodeJam.Targeting.Tests;
 [TestFixture]
 public class EnvironmentTests
 {
-	private const string _expectedCiAssemblyVersionRegex = @"^1\.0\.\d+\.0$";
+	private const string _expectedCiAssemblyVersionRegex = @"^\d+\.\d+\.[1-9]\d*\.0$";
 
 	private const string _expectedLocalAssemblyVersionRegex = @"^1\.0\.0\.0$";
 

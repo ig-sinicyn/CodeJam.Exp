@@ -33,8 +33,8 @@
 		<Reference Condition=" '$(UseSystemComponentModelAnnotationsReference)' == 'true'" Include="System.ComponentModel.DataAnnotations" />
 	</ItemGroup>
 
+	<!-- Append missing TargetFrameworkAttribute -->
 	<ItemGroup>
-		<!-- Append missing TargetFrameworkAttribute -->
 		<AssemblyAttribute Condition=" '$(TargetFramework)' == 'net20'" Include="System.Runtime.Versioning.TargetFrameworkAttribute">
 			<_Parameter1>.NETFramework,Version=v2.0</_Parameter1>
 		</AssemblyAttribute>

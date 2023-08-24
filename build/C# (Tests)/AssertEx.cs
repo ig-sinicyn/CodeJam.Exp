@@ -2,6 +2,7 @@
 // ReSharper disable All
 #if TARGETS_NETCOREAPP || TARGETS_NETSTANDARD || NET40_OR_GREATER
 #else
+#pragma warning disable IDE0022
 // Copyright (c) Charlie Poole, Rob Prouse and Contributors. MIT License - see LICENSE.txt
 
 using NUnit.Framework.Constraints;

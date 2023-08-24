@@ -2,7 +2,7 @@
 <#@ assembly name="System.Linq" #>
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.Linq" #>
-<#@ include file = "TargetingTemplate.Logic.ttinclude"#><#+
+<#@ include file = "TargetingTemplate.Logic.ttinclude" #><#+
 	private void Emit(TargetingOptions options)
 	{
 		Targeting = options;
@@ -14,19 +14,19 @@ he code is regenerated.
 -->
 <Project>
 
-	<!-- We DO most development and testing on <#= Targeting.DefaultFramework #> target -->
-	<PropertyGroup Condition=" '$(TargetFramework)' == '<#= Targeting.DefaultFramework #>' ">
+	<!-- We DO most development and testing on <#=Targeting.DefaultFramework#> target -->
+	<PropertyGroup Condition=" '$(TargetFramework)' == '<#=Targeting.DefaultFramework#>' ">
 		<DefineConstants>$(DefineConstants);DEFAULT_PLATFORM</DefineConstants>
 	</PropertyGroup>
 
 	<!-- Templates for <TargetFrameworks/> project property -->
 	<!-- Visual Studio and Rider do select the first moniker in list as default target
-		therefore we place our default platform (<#= Targeting.DefaultFramework #>) at start of the list -->
+		therefore we place our default platform (<#=Targeting.DefaultFramework#>) at start of the list -->
 	<PropertyGroup>
-		<CopyMeTargetFrameworks><#= GetTargetFrameworkMonikers(Package) #></CopyMeTargetFrameworks>
-		<CopyMeMinimalTargetFrameworks><#= GetTargetFrameworkMonikers(Package | Minimal) #></CopyMeMinimalTargetFrameworks>
-		<CopyMeTestTargetFrameworks><#= GetTargetFrameworkMonikers(Test) #></CopyMeTestTargetFrameworks>
-		<CopyMeMinimalTestTargetFrameworks><#= GetTargetFrameworkMonikers(Test | Minimal) #></CopyMeMinimalTestTargetFrameworks>
+		<CopyMeTargetFrameworks><#=GetTargetFrameworkMonikers(Package)#></CopyMeTargetFrameworks>
+		<CopyMeMinimalTargetFrameworks><#=GetTargetFrameworkMonikers(Package | Minimal)#></CopyMeMinimalTargetFrameworks>
+		<CopyMeTestTargetFrameworks><#=GetTargetFrameworkMonikers(Test)#></CopyMeTestTargetFrameworks>
+		<CopyMeMinimalTestTargetFrameworks><#=GetTargetFrameworkMonikers(Test | Minimal)#></CopyMeMinimalTestTargetFrameworks>
 	</PropertyGroup>
 
 	<!-- Package reference switches -->
@@ -35,7 +35,7 @@ he code is regenerated.
 		foreach (var shim in GetShimFlags(PackageShims))
 		{
 #>
-		<Use<#= shim #>>false</Use<#= shim #>>
+		<Use<#=shim#>>false</Use<#=shim#>>
 <#+
 		}
 #>
@@ -45,12 +45,12 @@ he code is regenerated.
 		{
 #>
 
-	<PropertyGroup Condition=" '$(TargetFramework)' == '<#= p.Key #>' ">
+	<PropertyGroup Condition=" '$(TargetFramework)' == '<#=p.Key#>' ">
 <#+
 			foreach (var shim in GetShimFlags(p.Value & PackageShims))
 			{
 #>
-		<Use<#= shim #>>true</Use<#= shim #>>
+		<Use<#=shim#>>true</Use<#=shim#>>
 <#+
 			}
 #>
@@ -65,7 +65,7 @@ he code is regenerated.
 		foreach (var p in Targeting.DefaultPackageVersions)
 		{
 #>
-		<<#= p.Key #>Version><#= p.Value #></<#= p.Key #>Version>
+		<<#=p.Key#>Version><#=p.Value#></<#=p.Key#>Version>
 <#+
 		}
 #>
@@ -75,12 +75,12 @@ he code is regenerated.
 		{
 #>
 
-	<PropertyGroup Condition=" '$(TargetFramework)' == '<#= g.Key #>' ">
+	<PropertyGroup Condition=" '$(TargetFramework)' == '<#=g.Key#>' ">
 <#+
 			foreach (var p in g.Value)
 			{
 #>
-		<<#= p.Key #>Version><#= p.Value #></<#= p.Key #>Version>
+		<<#=p.Key#>Version><#=p.Value#></<#=p.Key#>Version>
 <#+
 			}
 #>
@@ -103,7 +103,7 @@ he code is regenerated.
 		var monikers = monikerShims.OrderBy(x => GetMonikerVersion(x.Key)).Select(x => x.Key).ToArray();
 #>
 
-	<!-- DefineConstants for <#= description #> -->
+	<!-- DefineConstants for <#=description#> -->
 <#+
 		for (var monikerIndex = 0; monikerIndex < monikers.Length; monikerIndex++)
 		{
@@ -120,19 +120,19 @@ he code is regenerated.
 					.Take(monikerIndex + 1)
 					.Select(m => m.Replace(".", "").ToUpperInvariant() + "_OR_GREATER"));
 #>
-	<PropertyGroup Condition=" '$(TargetFramework)' == '<#= target #>' ">
-		<DefineConstants>$(DefineConstants);<#= platform #></DefineConstants>
+	<PropertyGroup Condition=" '$(TargetFramework)' == '<#=target#>' ">
+		<DefineConstants>$(DefineConstants);<#=platform#></DefineConstants>
 <#+
 			if (lessThanConstants != "")
 			{
 #>
-		<DefineConstants>$(DefineConstants);<#= lessThanConstants #></DefineConstants>
+		<DefineConstants>$(DefineConstants);<#=lessThanConstants#></DefineConstants>
 <#+
 			}
 			if (notLessThanConstants != "")
 			{
 #>
-		<DefineConstants>$(DefineConstants);<#= notLessThanConstants #></DefineConstants>
+		<DefineConstants>$(DefineConstants);<#=notLessThanConstants#></DefineConstants>
 <#+
 			}
 #>

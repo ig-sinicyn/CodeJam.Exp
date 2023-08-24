@@ -1,6 +1,6 @@
 ﻿<Project>
-	<!-- Required by VS project loader -->
 	<PropertyGroup>
+		<!-- Required by VS project loader -->
 		<TargetFramework>netstandard2.0</TargetFramework>
 
 		<!-- Required for proper autocompletion in linked files -->

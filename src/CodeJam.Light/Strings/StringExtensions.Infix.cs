@@ -29,7 +29,6 @@ public static partial class StringExtensions
 	[Pure, ContractsPure]
 	public static bool NotNullNorEmpty([NotNullWhen(true)] this string? str) => !str.IsNullOrEmpty();
 
-
 	/// <summary>
 	/// Concatenates all the elements of a string array, using the specified separator between each element.
 	/// </summary>

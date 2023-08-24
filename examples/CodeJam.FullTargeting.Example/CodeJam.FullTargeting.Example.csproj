@@ -15,5 +15,4 @@
 		<Compile Include="..\..\build\C#\IndexRange\RuntimeHelpers.cs" Link="Properties\RuntimeHelpers.cs" />
 		<Compile Include="..\CodeJam.MinimalTargeting.Example\TargetingFeatures.cs" Link="TargetingFeatures.cs" />
 	</ItemGroup>
-
 </Project>
