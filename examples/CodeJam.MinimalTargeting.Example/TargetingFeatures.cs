@@ -6,6 +6,8 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
+using static CodeJam.Targeting.TargetingFeatures;
+
 namespace CodeJam.Targeting;
 
 [PublicAPI]
@@ -100,7 +102,6 @@ public static class TargetingFeatures
 		return true;
 	}
 
-	[Pure, ContractsPure]
 	[CollectionAccess(CollectionAccessType.Read)]
 	public static TValue? GetValueSample<TKey, TValue>(
 		this IReadOnlyDictionary<TKey, TValue> dictionary,
@@ -110,6 +111,23 @@ public static class TargetingFeatures
 		dictionary.TryGetValue(key, out var result)
 			? result
 			: defaultValue;
+
+	public readonly record struct MemberNotNullWhenSample<T>(T? Value)
+		where T : class
+	{
+		[MemberNotNullWhen(true, nameof(Value))]
+		public bool HasValue => Value != null;
+	}
+
+	public static string MemberHasValueSample(string? input)
+	{
+		var result = new MemberNotNullWhenSample<string>(input);
+
+		if (result.HasValue)
+			return result.Value;
+
+		return "N/A";
+	}
 
 	#endregion
 

@@ -14,8 +14,8 @@
 			["netcoreapp2.0"] = TheraotCore | BclAsyncInterfaces | SystemMemory,
 			["netcoreapp2.1"] = TheraotCore | BclAsyncInterfaces,
 			["netcoreapp2.2"] = TheraotCore | BclAsyncInterfaces,
-			["netcoreapp3.0"] = IsExternalInit,
-			["netcoreapp3.1"] = IsExternalInit | PackageAndTest,
+			["netcoreapp3.0"] = InitAndNullable,
+			["netcoreapp3.1"] = InitAndNullable | PackageAndTest,
 			["net5.0"] = None,
 			["net6.0"] = None | PackageAndTest | Minimal,
 			["net7.0"] = None | PackageAndTest

@@ -39,10 +39,12 @@ he code is regenerated.
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0' ">
 		<UseIsExternalInit>true</UseIsExternalInit>
+		<UseNullable>true</UseNullable>
 	</PropertyGroup>
 
 	<PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
