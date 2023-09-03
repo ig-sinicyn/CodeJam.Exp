@@ -60,6 +60,24 @@ public static class TargetingFeatures
 
 	#endregion
 
+	#region TaskCompletionSource
+
+	public static Task<T> TaskCompletionResultSample<T>(T value)
+	{
+		var result = new TaskCompletionSource<T>();
+		result.TrySetResult(value);
+		return result.Task;
+	}
+
+	public static Task TaskCompletionCancellationSample(CancellationToken cancellation)
+	{
+		var result = new TaskCompletionSource<int>();
+		result.TrySetCanceled(cancellation);
+		return result.Task;
+	}
+
+	#endregion
+
 	#region Records
 
 #if NETCOREAPP20_OR_GREATER || NETSTANDARD20_OR_GREATER || NET40_OR_GREATER

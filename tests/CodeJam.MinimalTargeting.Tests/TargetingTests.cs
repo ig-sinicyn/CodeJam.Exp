@@ -164,6 +164,43 @@ public class TargetingTests
 
 	#endregion
 
+	#region TaskCompletionSource
+
+	[Test]
+	public void TaskCompletion_Result_Ok()
+	{
+		var task = TaskCompletionResultSample(1);
+
+		using var _ = new AssertionScope();
+		task.IsCompleted.Should().BeTrue();
+		task.Result.Should().Be(1);
+	}
+
+	[Test]
+	public void TaskCompletion_NotCancelled_Ok()
+	{
+		using var cts = new CancellationTokenSource();
+		var task = TaskCompletionCancellationSample(cts.Token);
+
+		using var _ = new AssertionScope();
+		task.IsCompleted.Should().BeFalse();
+		task.IsCanceled.Should().BeFalse();
+	}
+
+	[Test]
+	public void TaskCompletion_Cancelled_Ok()
+	{
+		using var cts = new CancellationTokenSource();
+		var task = TaskCompletionCancellationSample(cts.Token);
+		cts.Cancel();
+
+		using var _ = new AssertionScope();
+		task.IsCompleted.Should().BeTrue();
+		task.IsCanceled.Should().BeTrue();
+	}
+
+	#endregion
+
 	#region Records
 
 #if NETCOREAPP20_OR_GREATER || NETSTANDARD20_OR_GREATER || NET40_OR_GREATER
@@ -339,18 +376,16 @@ public class TargetingTests
 
 	#endregion
 
-
 	#region FormattableString
 
 	[Test]
 	public void FormattableString_Ok() =>
-		TargetingFeatures.FormattableStringSample($"Hello, {int.Parse("1")}!")
+		FormattableStringSample($"Hello, {int.Parse("1")}!")
 			.Should().Be("Hello, 1!");
 	[Test]
 	public void UseFormattableString_Ok() =>
-		TargetingFeatures.UseFormattableStringSample()
+		UseFormattableStringSample()
 			.Should().Be("Hello, " + Environment.MachineName);
 
 	#endregion
-
 }

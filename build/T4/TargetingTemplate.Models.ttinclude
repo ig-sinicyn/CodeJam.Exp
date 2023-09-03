@@ -58,11 +58,6 @@
 		LegacyNetFramework = TheraotCore
 			| NetReferenceAssemblies
 			| SystemComponentModelAnnotationsReference,
-		LegacyNetFramework45 = InitAndNullable 
-			| NetReferenceAssemblies 
-			| SystemComponentModelAnnotationsReference
-			| SystemThreadingTasks
-			| SystemValueTuple,
 		NetFramework = InitAndNullable 
 			| SystemThreadingTasks
 			| SystemComponentModelAnnotationsReference,
