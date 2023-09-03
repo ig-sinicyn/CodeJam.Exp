@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -269,6 +270,16 @@ public static class TargetingFeatures
 		throw new InvalidOperationException("Should not be thrown");
 	}
 #endif
+
+	#endregion
+
+	#region FormattableString
+
+	public static string FormattableStringSample(FormattableString input) =>
+		input.ToString(CultureInfo.InvariantCulture);
+
+	public static string UseFormattableStringSample() =>
+		FormattableStringSample($"Hello, {Environment.MachineName}");
 
 	#endregion
 }

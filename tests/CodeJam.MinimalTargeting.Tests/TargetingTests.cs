@@ -1,6 +1,7 @@
 using FluentAssertions.Execution;
 
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -335,6 +336,20 @@ public class TargetingTests
 		AssertEx.ThrowsAsync<OperationCanceledException>(async () =>
 			await UseAsyncEnumeratorAsync(_canceledToken));
 #endif
+
+	#endregion
+
+
+	#region FormattableString
+
+	[Test]
+	public void FormattableString_Ok() =>
+		TargetingFeatures.FormattableStringSample($"Hello, {int.Parse("1")}!")
+			.Should().Be("Hello, 1!");
+	[Test]
+	public void UseFormattableString_Ok() =>
+		TargetingFeatures.UseFormattableStringSample()
+			.Should().Be("Hello, " + Environment.MachineName);
 
 	#endregion
 
